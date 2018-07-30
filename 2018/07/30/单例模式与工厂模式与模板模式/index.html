@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Java知识点," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="单例：最多一个实例对象工厂模式：所有对象都由工厂生产（静态工厂）模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。例子：做菜（提取模板来约束）： 配备食材（不同的菜食材不一样） 切菜 烧菜  1234567891011121314151617181920//模板设计模式public  abstract class Cook &amp;#1">
+<meta name="description" content="单例：最多一个实例对象工厂模式：所有对象都由工厂生产（静态工厂）模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。例子：做菜（提取模板来约束）： 配备食材（不同的菜食材不一样） 切菜 烧菜  12345678910111213141516171819202122//模板设计模式public  abstract class Cook">
+<meta name="keywords" content="Java知识点">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单例模式与工厂模式与模板模式">
 <meta property="og:url" content="http://yoursite.com/2018/07/30/单例模式与工厂模式与模板模式/index.html">
 <meta property="og:site_name" content="SuMo">
-<meta property="og:description" content="单例：最多一个实例对象工厂模式：所有对象都由工厂生产（静态工厂）模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。例子：做菜（提取模板来约束）： 配备食材（不同的菜食材不一样） 切菜 烧菜  1234567891011121314151617181920//模板设计模式public  abstract class Cook &amp;#1">
+<meta property="og:description" content="单例：最多一个实例对象工厂模式：所有对象都由工厂生产（静态工厂）模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。例子：做菜（提取模板来约束）： 配备食材（不同的菜食材不一样） 切菜 烧菜  12345678910111213141516171819202122//模板设计模式public  abstract class Cook">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-30T13:45:18.000Z">
+<meta property="og:updated_time" content="2018-07-30T13:51:19.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单例模式与工厂模式与模板模式">
-<meta name="twitter:description" content="单例：最多一个实例对象工厂模式：所有对象都由工厂生产（静态工厂）模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。例子：做菜（提取模板来约束）： 配备食材（不同的菜食材不一样） 切菜 烧菜  1234567891011121314151617181920//模板设计模式public  abstract class Cook &amp;#1">
+<meta name="twitter:description" content="单例：最多一个实例对象工厂模式：所有对象都由工厂生产（静态工厂）模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。例子：做菜（提取模板来约束）： 配备食材（不同的菜食材不一样） 切菜 烧菜  12345678910111213141516171819202122//模板设计模式public  abstract class Cook">
 
 
 
@@ -304,8 +305,8 @@
 <li>切菜</li>
 <li>烧菜</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//模板设计模式</span><br><span class="line">public  abstract class Cook &#123;</span><br><span class="line">	//设计模板</span><br><span class="line">	public abstract void ready();</span><br><span class="line">	//1</span><br><span class="line">	public abstract void wash();</span><br><span class="line">	//2</span><br><span class="line">	public abstract void cook();</span><br><span class="line">	//3</span><br><span class="line">	//统一规范</span><br><span class="line">	public final void cookFull() &#123;</span><br><span class="line">		//固定模板，禁止子类修改</span><br><span class="line">		ready();</span><br><span class="line">		wash();</span><br><span class="line">		cook();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">```		</span><br><span class="line">### 番茄鸡蛋</span><br></pre></td></tr></table></figure>
-<p>public class TomatoAndEgg extends Cook {<br>    @Override<br>    public void ready() {<br>        // TODO Auto-generated method stub<br>        System.out.println(“准备番茄鸡蛋”);<br>    }<br>    //<br>    @Override<br>    public void wash() {<br>        // TODO Auto-generated method stub<br>        System.out.println(“洗番茄鸡蛋”);<br>    //<br>    }<br>    //<br>    @Override<br>    public void cook() {<br>        // TODO Auto-generated method stub<br>        System.out.println(“做番茄鸡蛋”);<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//模板设计模式</span><br><span class="line">public  abstract class Cook &#123;</span><br><span class="line">	//设计模板</span><br><span class="line">	public abstract void ready();</span><br><span class="line">	//1</span><br><span class="line">	public abstract void wash();</span><br><span class="line">	//2</span><br><span class="line">	public abstract void cook();</span><br><span class="line">	//3</span><br><span class="line">	//统一规范</span><br><span class="line">	public final void cookFull() &#123;</span><br><span class="line">		//固定模板，禁止子类修改</span><br><span class="line">		ready();</span><br><span class="line">		wash();</span><br><span class="line">		cook();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line">```	</span><br><span class="line"></span><br><span class="line">	</span><br><span class="line">### 番茄鸡蛋</span><br></pre></td></tr></table></figure>
+<p>public class TomatoAndEgg extends Cook {<br>    @Override<br>    public void ready() {<br>        // TODO Auto-generated method stub<br>        System.out.println(“准备番茄鸡蛋”);<br>    }<br>    //<br>    @Override<br>    public void wash() {<br>        // TODO Auto-generated method stub<br>        System.out.println(“洗番茄鸡蛋”);<br>    //<br>    }<br>    //<br>    @Override<br>    public void cook() {<br>        // TODO Auto-generated method stub<br>        System.out.println(“做番茄鸡蛋”);<br>    }<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### main方法</span><br></pre></td></tr></table></figure></p>
 <p>public class Test {<br>    public static void main(String[] args) {<br>        //模板类：父类优先定义好骨架模板final，不能被修改；具体的实现细节，推迟到给子类实现<br>    Cook cook = new TomatoAndEgg();<br>    cook.cookFull();//模板（执行步骤，父类一定要统一）<br>    }<br>}<br><code>`</code></p>
 <h3 id="策略模式：不同用户的策略不一样，不同的环境来选择"><a href="#策略模式：不同用户的策略不一样，不同的环境来选择" class="headerlink" title="策略模式：不同用户的策略不一样，不同的环境来选择"></a>策略模式：不同用户的策略不一样，不同的环境来选择</h3><h4 id="查找算法为例："><a href="#查找算法为例：" class="headerlink" title="查找算法为例："></a>查找算法为例：</h4><ul>
 <li>顺序查找</li>
@@ -325,6 +326,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java知识点/" rel="tag"># Java知识点</a>
+          
+        </div>
       
 
       
@@ -436,6 +443,15 @@
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
             
 
           </nav>
