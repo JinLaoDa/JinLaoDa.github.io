@@ -79,14 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="###单例：最多一个实例对象 ###工厂模式：所有对象都由工厂生产（静态工厂） ###模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。 #####例子：做菜（提取模板来约束）：  配备食材（不同的菜食材不一样） 切菜 烧菜 //模板设计模式 public  abstract class Cook {     //设计模板">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单例模式与工厂模式与模板模式">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/单例模式与工厂模式与模板模式/index.html">
 <meta property="og:site_name" content="SuMo">
+<meta property="og:description" content="###单例：最多一个实例对象 ###工厂模式：所有对象都由工厂生产（静态工厂） ###模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。 #####例子：做菜（提取模板来约束）：  配备食材（不同的菜食材不一样） 切菜 烧菜 //模板设计模式 public  abstract class Cook {     //设计模板">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-29T10:41:00.000Z">
+<meta property="og:updated_time" content="2018-07-30T03:09:06.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="单例模式与工厂模式与模板模式">
+<meta name="twitter:description" content="###单例：最多一个实例对象 ###工厂模式：所有对象都由工厂生产（静态工厂） ###模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。 #####例子：做菜（提取模板来约束）：  配备食材（不同的菜食材不一样） 切菜 烧菜 //模板设计模式 public  abstract class Cook {     //设计模板">
 
 
 
@@ -116,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/30/单例模式与工厂模式与模板模式/"/>
 
 
 
 
 
-  <title>tags | SuMo</title>
+  <title>单例模式与工厂模式与模板模式 | SuMo</title>
   
 
 
@@ -217,40 +220,197 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/30/单例模式与工厂模式与模板模式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gao feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SuMo">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                No tags
-            </div>
-            <div class="tag-cloud-tags">
+          <h1 class="post-title" itemprop="name headline">单例模式与工厂模式与模板模式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-            </div>
-          </div>
-        
-      </div>
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-30T11:08:20+08:00">
+                2018-07-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>###单例：最多一个实例对象</p>
+<p>###工厂模式：所有对象都由工厂生产（静态工厂）</p>
+<p>###模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。</p>
+<p>#####例子：做菜（提取模板来约束）：</p>
+<ul>
+<li>配备食材（不同的菜食材不一样）</li>
+<li>切菜</li>
+<li><p>烧菜</p>
+<pre><code>//模板设计模式
+public  abstract class Cook {
+    //设计模板
+    public abstract void ready();
+    //1
+    public abstract void wash();
+    //2
+    public abstract void cook();
+    //3
+    //统一规范
+    public final void cookFull() {
+        //固定模板，禁止子类修改
+        ready();
+        wash();
+        cook();
+    }
+
+}
+</code></pre><p>###番茄鸡蛋</p>
+<pre><code>public class TomatoAndEgg extends Cook {
+    @Override
+    public void ready() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot;准备番茄鸡蛋&quot;);
+    }
+    //
+    @Override
+    public void wash() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot;洗番茄鸡蛋&quot;);
+    //
+    }
+    //
+    @Override
+    public void cook() {
+        // TODO Auto-generated method stub
+        System.out.println(&quot;做番茄鸡蛋&quot;);
+    }
+}
+</code></pre><p>###</p>
+<pre><code>public class Test {
+    public static void main(String[] args) {
+        //模板类：父类优先定义好骨架模板final，不能被修改；具体的实现细节，推迟到给子类实现
+    Cook cook = new TomatoAndEgg();
+    cook.cookFull();//模板（执行步骤，父类一定要统一）
+    }
+}
+</code></pre><p>###策略模式：不同用户的策略不一样，不同的环境来选择<br>####查找算法为例：</p>
+</li>
+<li>顺序查找</li>
+<li>二分查找</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/29/基本数据类型/" rel="next" title="基本数据类型">
+                <i class="fa fa-chevron-left"></i> 基本数据类型
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
