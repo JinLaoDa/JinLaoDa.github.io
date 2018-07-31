@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="JavaAPI," />
+  <meta name="keywords" content="继承," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="JavaAPIjava默认的包是Java.lang = language Java语言包，该包下的所有类使用无需导入包，否则需要！ Object类是层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。 子类都可以重写父类的方法，意味着任何类都可以继承或重写object的所有方法除非（final，private） 1Object（）无参构造，即默认的构造方法">
-<meta name="keywords" content="JavaAPI">
+<meta name="description" content="继承继承的特性 子类拥有父类非private的属性，方法。  子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。  子类可以用自己的方式实现父类的方法。  Java的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，  多重继承就是，例如A类继承B类，B类继承C类，所以按照关系就是C类是B类的父类，B类是A类的父类，  这是java继承区别于C++继承的一个特性。  提高了">
+<meta name="keywords" content="继承">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaAPI">
-<meta property="og:url" content="http://yoursite.com/2018/07/31/JavaAPI/index.html">
+<meta property="og:title" content="继承;2C">
+<meta property="og:url" content="http://yoursite.com/2018/07/31/继承-2C/index.html">
 <meta property="og:site_name" content="SuMo">
-<meta property="og:description" content="JavaAPIjava默认的包是Java.lang = language Java语言包，该包下的所有类使用无需导入包，否则需要！ Object类是层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。 子类都可以重写父类的方法，意味着任何类都可以继承或重写object的所有方法除非（final，private） 1Object（）无参构造，即默认的构造方法">
+<meta property="og:description" content="继承继承的特性 子类拥有父类非private的属性，方法。  子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。  子类可以用自己的方式实现父类的方法。  Java的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，  多重继承就是，例如A类继承B类，B类继承C类，所以按照关系就是C类是B类的父类，B类是A类的父类，  这是java继承区别于C++继承的一个特性。  提高了">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-31T03:09:09.000Z">
+<meta property="og:updated_time" content="2018-07-31T05:52:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaAPI">
-<meta name="twitter:description" content="JavaAPIjava默认的包是Java.lang = language Java语言包，该包下的所有类使用无需导入包，否则需要！ Object类是层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。 子类都可以重写父类的方法，意味着任何类都可以继承或重写object的所有方法除非（final，private） 1Object（）无参构造，即默认的构造方法">
+<meta name="twitter:title" content="继承;2C">
+<meta name="twitter:description" content="继承继承的特性 子类拥有父类非private的属性，方法。  子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。  子类可以用自己的方式实现父类的方法。  Java的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，  多重继承就是，例如A类继承B类，B类继承C类，所以按照关系就是C类是B类的父类，B类是A类的父类，  这是java继承区别于C++继承的一个特性。  提高了">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/07/31/JavaAPI/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/07/31/继承-2C/"/>
 
 
 
 
 
-  <title>JavaAPI | SuMo</title>
+  <title>继承;2C | SuMo</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/31/JavaAPI/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/07/31/继承-2C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gao feng">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">JavaAPI</h1>
+          <h1 class="post-title" itemprop="name headline">继承;2C</h1>
         
 
         <div class="post-meta">
@@ -262,7 +262,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-31T11:01:55+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-31T13:52:01+08:00">
                 2018-07-31
               </time>
             
@@ -300,19 +300,32 @@
       
 
       
-        <h1 id="JavaAPI"><a href="#JavaAPI" class="headerlink" title="JavaAPI"></a>JavaAPI</h1><p>java默认的包是Java.lang = language Java语言包，该包下的所有类使用无需导入包，否则需要！</p>
-<p>Object类是层次结构的<strong>根类</strong>。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。</p>
-<p>子类都可以重写父类的方法，意味着任何类都可以继承或重写object的所有方法除非<strong>（final，private）</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object（）无参构造，即默认的构造方法</span><br></pre></td></tr></table></figure>
-<h3 id="数组里只能存放相同的数据元素-gt-解决办法："><a href="#数组里只能存放相同的数据元素-gt-解决办法：" class="headerlink" title="数组里只能存放相同的数据元素-&gt;解决办法："></a>数组里只能存放相同的数据元素-&gt;解决办法：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object[] arrs  = &#123;1,2.0,&quot;你好&quot;,new Date(),false&#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="原理：多态，子父类"><a href="#原理：多态，子父类" class="headerlink" title="原理：多态，子父类"></a>原理：多态，子父类</h3><h2 id="方法摘要"><a href="#方法摘要" class="headerlink" title="方法摘要"></a>方法摘要</h2><p>protected  Object    clone() </p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">         </span><br><span class="line">boolean	equals(Object obj) </span><br><span class="line">**equals（）是一个方法只有对象才可以调用**</span><br><span class="line"></span><br><span class="line"> ```指示其他某个对象是否与此对象“相等”。</span><br></pre></td></tr></table></figure>
-<p> String    toString() <strong>默认可以省去，一般子类会重写toString方法来输出属性值</strong><br> 变量拼接，先开辟空间，再拼接</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"> **字符串在字符串常量池里，</span><br><span class="line"> String缺陷在做字符串拼接的时候，反复的开辟和销毁空间**</span><br><span class="line">          </span><br><span class="line">#### 1.protected  void	finalize() </span><br><span class="line"></span><br><span class="line">  ```当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃  	  圾回收器调用此方法。</span><br></pre></td></tr></table></figure>
-<h4 id="2-Class-lt-gt-getClass"><a href="#2-Class-lt-gt-getClass" class="headerlink" title="2.Class&lt;?&gt;    getClass()"></a>2.Class&lt;?&gt;    getClass()</h4> <figure class="highlight plain"><figcaption><span>Object 的运行时类。```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">          </span><br><span class="line">#### 3.int	hashCode() </span><br><span class="line"> </span><br><span class="line"> ``` 返回该对象的哈希码值。</span><br></pre></td></tr></table></figure>
-<h4 id="4-void-notify"><a href="#4-void-notify" class="headerlink" title="4.void    notify()"></a>4.void    notify()</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">          </span><br><span class="line">#### 5.void	notifyAll() </span><br><span class="line"> </span><br><span class="line"> ``` 唤醒在此对象监视器上等待的所有线程。</span><br></pre></td></tr></table></figure>
-<h4 id="6-void-wait"><a href="#6-void-wait" class="headerlink" title="6.void    wait()"></a>6.void    wait()</h4>  <figure class="highlight plain"><figcaption><span>notify() 方法或 notifyAll() 方法前，导致当前线程等待。```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">          </span><br><span class="line">#### 7.void	wait(long timeout) </span><br><span class="line"> </span><br><span class="line">  ```在其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者超过指定的时间量前，导致当前线程等待。</span><br></pre></td></tr></table></figure>
-<h4 id="8-void-wait-long-timeout-int-nanos"><a href="#8-void-wait-long-timeout-int-nanos" class="headerlink" title="8.void    wait(long timeout, int nanos)"></a>8.void    wait(long timeout, int nanos)</h4><p>  <code>在其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者其他某个线程中断当前线程，或者已超过某个实际时间量前，导致当前线程等待。</code></p>
+        <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h3 id="继承的特性"><a href="#继承的特性" class="headerlink" title="继承的特性"></a>继承的特性</h3><ul>
+<li><p>子类拥有父类非private的属性，方法。</p>
+</li>
+<li><p>子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。</p>
+</li>
+<li><p>子类可以用自己的方式实现父类的方法。</p>
+</li>
+<li><p>Java的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，</p>
+</li>
+<li><p>多重继承就是，例如A类继承B类，B类继承C类，所以按照关系就是C类是B类的父类，B类是A类的父类，</p>
+</li>
+<li><p>这是java继承区别于C++继承的一个特性。</p>
+</li>
+<li><p>提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系）。</p>
+</li>
+</ul>
+<h3 id="extends关键字"><a href="#extends关键字" class="headerlink" title="extends关键字"></a>extends关键字</h3><pre><code>在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一个类。
+</code></pre><h3 id="implements关键字"><a href="#implements关键字" class="headerlink" title="implements关键字"></a>implements关键字</h3><pre><code>使用 implements 关键字可以变相的使java具有多继承的特性，
+
+使用范围为类继承接口的情况，可以同时继承多个接口（接口跟接口之间采用逗号分隔）。
+</code></pre><h3 id="super关键字："><a href="#super关键字：" class="headerlink" title="super关键字："></a>super关键字：</h3><pre><code>我们可以通过super关键字来实现对父类成员的访问，用来引用当前对象的父类。
+</code></pre><h3 id="this关键字："><a href="#this关键字：" class="headerlink" title="this关键字："></a>this关键字：</h3><pre><code>指向自己的引用。
+</code></pre><h3 id="final-关键字"><a href="#final-关键字" class="headerlink" title="final 关键字"></a>final 关键字</h3><pre><code>声明类可以把类定义为不能继承的，即最终类；或者用于修饰方法，该方法不能被子类重写
+</code></pre><h3 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h3><p>  <strong>子类不能继承父类的构造器（构造方法或者构造函数）</strong></p>
+<p>  如果父类的构造器带有参数，则必须在子类的构造器中显式地通过 super 关键字调用父类的构造器并配以适当的参数列表。</p>
+<p>  如果父类构造器没有参数，则在子类的构造器中不需要使用 super 关键字调用父类构造器，系统会自动调用父类的无参构造器。</p>
 
       
     </div>
@@ -330,7 +343,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaAPI/" rel="tag"># JavaAPI</a>
+            <a href="/tags/继承/" rel="tag"># 继承</a>
           
         </div>
       
@@ -343,8 +356,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/31/字符串的方法/" rel="next" title="字符串的方法">
-                <i class="fa fa-chevron-left"></i> 字符串的方法
+              <a href="/2018/07/31/JavaAPI/" rel="next" title="JavaAPI">
+                <i class="fa fa-chevron-left"></i> JavaAPI
               </a>
             
           </div>
@@ -352,10 +365,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/31/继承-2C/" rel="prev" title="继承;2C">
-                继承;2C <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -482,7 +491,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaAPI"><span class="nav-number">1.</span> <span class="nav-text">JavaAPI</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数组里只能存放相同的数据元素-gt-解决办法："><span class="nav-number">1.0.1.</span> <span class="nav-text">数组里只能存放相同的数据元素-&gt;解决办法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原理：多态，子父类"><span class="nav-number">1.0.2.</span> <span class="nav-text">原理：多态，子父类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方法摘要"><span class="nav-number">1.1.</span> <span class="nav-text">方法摘要</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Class-lt-gt-getClass"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">2.Class&lt;?&gt;    getClass()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-void-notify"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">4.void    notify()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-void-wait"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">6.void    wait()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-void-wait-long-timeout-int-nanos"><span class="nav-number">1.1.0.4.</span> <span class="nav-text">8.void    wait(long timeout, int nanos)</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#继承"><span class="nav-number">1.</span> <span class="nav-text">继承</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#继承的特性"><span class="nav-number">1.0.1.</span> <span class="nav-text">继承的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#extends关键字"><span class="nav-number">1.0.2.</span> <span class="nav-text">extends关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#implements关键字"><span class="nav-number">1.0.3.</span> <span class="nav-text">implements关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#super关键字："><span class="nav-number">1.0.4.</span> <span class="nav-text">super关键字：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#this关键字："><span class="nav-number">1.0.5.</span> <span class="nav-text">this关键字：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#final-关键字"><span class="nav-number">1.0.6.</span> <span class="nav-text">final 关键字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构造器"><span class="nav-number">1.0.7.</span> <span class="nav-text">构造器</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
