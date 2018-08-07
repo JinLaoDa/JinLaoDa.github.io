@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="概念," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候     如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
+<meta name="description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
+<meta name="keywords" content="概念">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SuMo">
+<meta property="og:title" content="链表">
 <meta property="og:url" content="http://jinlaoda.com/2018/08/03/数据/index.html">
 <meta property="og:site_name" content="SuMo">
-<meta property="og:description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候     如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
+<meta property="og:description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-03T03:11:04.000Z">
+<meta property="og:updated_time" content="2018-08-07T12:22:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SuMo">
-<meta name="twitter:description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候     如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
+<meta name="twitter:title" content="链表">
+<meta name="twitter:description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title> | SuMo</title>
+  <title>链表 | SuMo</title>
   
 
 
@@ -305,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">链表</h1>
         
 
         <div class="post-meta">
@@ -358,7 +359,7 @@
         <p>###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费</p>
 <h3 id="改进：数据不存在一起（物理分离），逻辑上是连续的"><a href="#改进：数据不存在一起（物理分离），逻辑上是连续的" class="headerlink" title="改进：数据不存在一起（物理分离），逻辑上是连续的"></a>改进：数据不存在一起（物理分离），逻辑上是连续的</h3><p>##链式，链表</p>
 <ul>
-<li>如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候    </li>
+<li>如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候</li>
 <li>如果查询比价频繁，使用Arraylist（员工系统）</li>
 </ul>
 <h3 id="List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据"><a href="#List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据" class="headerlink" title="List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据"></a>List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据</h3>
@@ -376,6 +377,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/概念/" rel="tag"># 概念</a>
+          
+        </div>
+      
 
       
       
@@ -385,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/02/Java日期时间/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/08/02/Java日期时间/" rel="next" title="Java日期时间">
+                <i class="fa fa-chevron-left"></i> Java日期时间
               </a>
             
           </div>
@@ -491,7 +498,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

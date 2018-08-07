@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Task," />
 
 
 
@@ -82,15 +82,16 @@
 
 
 <meta name="description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
+<meta name="keywords" content="Task">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SuMo">
+<meta property="og:title" content="8-7-Task">
 <meta property="og:url" content="http://jinlaoda.com/2018/08/07/8-7Task/index.html">
 <meta property="og:site_name" content="SuMo">
 <meta property="og:description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T11:07:04.000Z">
+<meta property="og:updated_time" content="2018-08-07T12:23:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SuMo">
+<meta name="twitter:title" content="8-7-Task">
 <meta name="twitter:description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title> | SuMo</title>
+  <title>8-7-Task | SuMo</title>
   
 
 
@@ -305,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">8-7-Task</h1>
         
 
         <div class="post-meta">
@@ -425,7 +426,7 @@ public static int GetMax(int [] a)
  * 判断他是文件还是目录，再创建一个目录IOTest,
  * 之后将HelloWorld.txt移动到IOTest目录下去；
  * 之后遍历IOTest这个目录下的文件
- * 
+ *
  * 程序分析：
  * 1、文件创建使用File的createNewFile()方法
  * 2、判断是文件用isFile(),判断是目录用isDirectory
@@ -481,7 +482,7 @@ public static void main(String[] args) {
  * 判断他是文件还是目录，再创建一个目录IOTest,
  * 之后将HelloWorld.txt移动到IOTest目录下去；
  * 之后遍历IOTest这个目录下的文件
- * 
+ *
  * 程序分析：
  * 1、文件创建使用File的createNewFile()方法
  * 2、判断是文件用isFile(),判断是目录用isDirectory
@@ -534,7 +535,7 @@ public static void main(String[] args) {
 <p>import java.io.File;<br>import java.util.List;</p>
 <p>public class Test2 {<br>    /**</p>
 <pre><code> * 递归实现输入任意目录，列出文件以及文件夹
- * 
+ *
  * 设计：在FileUtils类里面实现了逻辑操作，在另一边调用就可以了
  * */
 public static void main(String[] args) {
@@ -547,8 +548,9 @@ public static void main(String[] args) {
 
 }
 </code></pre><p>}</p>
-<p><code>`</code>    </p>
-<h4 id="5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。"><a href="#5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。" class="headerlink" title="5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。"></a>5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">//Bank类</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class Bank &#123;</span><br><span class="line">private double balance;</span><br><span class="line"></span><br><span class="line">Bank(double a) &#123;</span><br><span class="line">balance += a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void withDrawal(double dAmount) throws InsufficientFundsException, NagativeFundsException &#123;</span><br><span class="line">if(dAmount&lt;0) </span><br><span class="line">throw new InsufficientFundsException(dAmount);</span><br><span class="line">if(dAmount&gt;balance)</span><br><span class="line">throw new NagativeFundsException();</span><br><span class="line">System.out.println(&quot;取款：&quot;+dAmount);</span><br><span class="line">this.balance-=dAmount;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///InsufficientFundsException</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class InsufficientFundsException extends Exception &#123;</span><br><span class="line">InsufficientFundsException(double i)</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;发生错误：&quot;+&quot;取款额&quot;+i+&quot;为负数。&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///NagativeFundsException</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class NagativeFundsException extends Exception &#123;</span><br><span class="line">NagativeFundsException()</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;超出余额：&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class NagativeFundsException extends Exception &#123;</span><br><span class="line">NagativeFundsException()</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;超出余额：&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//测试主类</span><br><span class="line"></span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class TestBank &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">Bank b=new Bank(100);</span><br><span class="line">try&#123;</span><br><span class="line">b.withDrawal(-15);</span><br><span class="line">&#125;</span><br><span class="line">catch(InsufficientFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">catch(NagativeFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">try&#123;</span><br><span class="line">b.withDrawal(150);</span><br><span class="line">&#125;</span><br><span class="line">catch(InsufficientFundsException | NagativeFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">//运行结果</span><br><span class="line"></span><br><span class="line">发生错误：取款额-15.0为负数。 ///withdrawal调用的构造函数</span><br><span class="line">d0923.InsufficientFundsException</span><br><span class="line">at d0923.Bank.withDrawal(Bank.java:12) /// printStack</span><br><span class="line">at d0923.TestBank.main(TestBank.java:8)</span><br><span class="line">超出余额：</span><br><span class="line">d0923.NagativeFundsException</span><br><span class="line">at d0923.Bank.withDrawal(Bank.java:14)</span><br><span class="line">at d0923.TestBank.main(TestBank.java:20)</span><br></pre></td></tr></table></figure>
+<p><code>`</code></p>
+<h4 id="5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。"><a href="#5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。" class="headerlink" title="5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。"></a>5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">//Bank类</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class Bank &#123;</span><br><span class="line">private double balance;</span><br><span class="line"></span><br><span class="line">Bank(double a) &#123;</span><br><span class="line">balance += a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void withDrawal(double dAmount) throws InsufficientFundsException, NagativeFundsException &#123;</span><br><span class="line">if(dAmount&lt;0)</span><br><span class="line">throw new InsufficientFundsException(dAmount);</span><br><span class="line">if(dAmount&gt;balance)</span><br><span class="line">throw new NagativeFundsException();</span><br><span class="line">System.out.println(&quot;取款：&quot;+dAmount);</span><br><span class="line">this.balance-=dAmount;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///InsufficientFundsException</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class InsufficientFundsException extends Exception &#123;</span><br><span class="line">InsufficientFundsException(double i)</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;发生错误：&quot;+&quot;取款额&quot;+i+&quot;为负数。&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///NagativeFundsException</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class NagativeFundsException extends Exception &#123;</span><br><span class="line">NagativeFundsException()</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;超出余额：&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class NagativeFundsException extends Exception &#123;</span><br><span class="line">NagativeFundsException()</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;超出余额：&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//测试主类</span><br><span class="line"></span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class TestBank &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">Bank b=new Bank(100);</span><br><span class="line">try&#123;</span><br><span class="line">b.withDrawal(-15);</span><br><span class="line">&#125;</span><br><span class="line">catch(InsufficientFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">catch(NagativeFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">try&#123;</span><br><span class="line">b.withDrawal(150);</span><br><span class="line">&#125;</span><br><span class="line">catch(InsufficientFundsException | NagativeFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">//运行结果</span><br><span class="line"></span><br><span class="line">发生错误：取款额-15.0为负数。 ///withdrawal调用的构造函数</span><br><span class="line">d0923.InsufficientFundsException</span><br><span class="line">at d0923.Bank.withDrawal(Bank.java:12) /// printStack</span><br><span class="line">at d0923.TestBank.main(TestBank.java:8)</span><br><span class="line">超出余额：</span><br><span class="line">d0923.NagativeFundsException</span><br><span class="line">at d0923.Bank.withDrawal(Bank.java:14)</span><br><span class="line">at d0923.TestBank.main(TestBank.java:20)</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -563,6 +565,12 @@ public static void main(String[] args) {
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Task/" rel="tag"># Task</a>
+          
+        </div>
+      
 
       
       
@@ -572,8 +580,8 @@ public static void main(String[] args) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/07/单元测试/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/08/07/单元测试/" rel="next" title="单元测试">
+                <i class="fa fa-chevron-left"></i> 单元测试
               </a>
             
           </div>
@@ -674,7 +682,7 @@ public static void main(String[] args) {
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

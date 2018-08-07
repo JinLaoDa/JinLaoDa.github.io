@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Task," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="#统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) import java.util.Scanner; /*  需求：统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) 举例： “Hello123World” 结果： 大写字符：2个 小写字符：8个 数字字符：3个  分析： 前提：字符串要存在 A:定义三个统计变量 bigCount">
+<meta name="description" content="#统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) import java.util.Scanner; /*  需求：统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) 举例： “Hello123World” 结果： 大写字符：2个 小写字符：8个 数字字符：3个* 分析： 前提：字符串要存在 A:定义三个统计变量 bigCount">
+<meta name="keywords" content="Task">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SuMo">
+<meta property="og:title" content="字符串">
 <meta property="og:url" content="http://jinlaoda.com/2018/07/31/统计字符串字母出现次数/index.html">
 <meta property="og:site_name" content="SuMo">
-<meta property="og:description" content="#统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) import java.util.Scanner; /*  需求：统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) 举例： “Hello123World” 结果： 大写字符：2个 小写字符：8个 数字字符：3个  分析： 前提：字符串要存在 A:定义三个统计变量 bigCount">
+<meta property="og:description" content="#统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) import java.util.Scanner; /*  需求：统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) 举例： “Hello123World” 结果： 大写字符：2个 小写字符：8个 数字字符：3个* 分析： 前提：字符串要存在 A:定义三个统计变量 bigCount">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-31T07:08:12.000Z">
+<meta property="og:updated_time" content="2018-08-07T12:22:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SuMo">
-<meta name="twitter:description" content="#统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) import java.util.Scanner; /*  需求：统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) 举例： “Hello123World” 结果： 大写字符：2个 小写字符：8个 数字字符：3个  分析： 前提：字符串要存在 A:定义三个统计变量 bigCount">
+<meta name="twitter:title" content="字符串">
+<meta name="twitter:description" content="#统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) import java.util.Scanner; /*  需求：统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符) 举例： “Hello123World” 结果： 大写字符：2个 小写字符：8个 数字字符：3个* 分析： 前提：字符串要存在 A:定义三个统计变量 bigCount">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title> | SuMo</title>
+  <title>字符串 | SuMo</title>
   
 
 
@@ -305,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">字符串</h1>
         
 
         <div class="post-meta">
@@ -365,8 +366,7 @@
 <li>结果：</li>
 <li>大写字符：2个</li>
 <li>小写字符：8个</li>
-<li>数字字符：3个</li>
-<li></li>
+<li>数字字符：3个<br>*</li>
 <li>分析：</li>
 <li>前提：字符串要存在</li>
 <li>A:定义三个统计变量</li>
@@ -378,16 +378,14 @@
 <li>C:判断该字符到底是属于那种类型的</li>
 <li>大：bigCount++</li>
 <li>小：smallCount++</li>
-<li>数字：numberCount++</li>
-<li></li>
+<li>数字：numberCount++<br>*</li>
 <li>这道题目的难点就是如何判断某个字符是大的，还是小的，还是数字的。</li>
 <li>ASCII码表：</li>
 <li>0 48</li>
 <li>A 65</li>
 <li>a 97</li>
 <li>虽然，我们按照数字的这种比较是可以的，但是想多了，有比这还简单的</li>
-<li>char ch = s.charAt(x);</li>
-<li></li>
+<li>char ch = s.charAt(x);<br>*</li>
 <li>if(ch&gt;=’0’ &amp;&amp; ch&lt;=’9’) numberCount++</li>
 <li>if(ch&gt;=’a’ &amp;&amp; ch&lt;=’z’) smallCount++</li>
 <li>if(ch&gt;=’A’ &amp;&amp; ch&lt;=’Z’) bigCount++</li>
@@ -412,6 +410,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Task/" rel="tag"># Task</a>
+          
+        </div>
+      
 
       
       
@@ -431,8 +435,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/31/未命名/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/07/31/未命名/" rel="prev" title="StringBuffer和StringBuilder">
+                StringBuffer和StringBuilder <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -518,7 +522,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>

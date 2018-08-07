@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="概念," />
 
 
 
@@ -81,17 +81,18 @@
 
 
 
-<meta name="description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0 StringBuffer()  构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。 1.字符串序列拼接，拼接到尾部append（数据）insert（int offset，插入的数据）delete（int start，int end）deleteCharAt（int index） 2.返回长度int capacit">
+<meta name="description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
+<meta name="keywords" content="概念">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SuMo">
+<meta property="og:title" content="StringBuffer和StringBuilder">
 <meta property="og:url" content="http://jinlaoda.com/2018/07/31/未命名/index.html">
 <meta property="og:site_name" content="SuMo">
-<meta property="og:description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0 StringBuffer()  构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。 1.字符串序列拼接，拼接到尾部append（数据）insert（int offset，插入的数据）delete（int start，int end）deleteCharAt（int index） 2.返回长度int capacit">
+<meta property="og:description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-31T10:20:00.000Z">
+<meta property="og:updated_time" content="2018-08-07T12:22:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SuMo">
-<meta name="twitter:description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0 StringBuffer()  构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。 1.字符串序列拼接，拼接到尾部append（数据）insert（int offset，插入的数据）delete（int start，int end）deleteCharAt（int index） 2.返回长度int capacit">
+<meta name="twitter:title" content="StringBuffer和StringBuilder">
+<meta name="twitter:description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
 
 
 
@@ -127,7 +128,7 @@
 
 
 
-  <title> | SuMo</title>
+  <title>StringBuffer和StringBuilder | SuMo</title>
   
 
 
@@ -305,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">StringBuffer和StringBuilder</h1>
         
 
         <div class="post-meta">
@@ -355,21 +356,27 @@
       
 
       
-        <p>StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0</p>
-<p>StringBuffer() </p>
-<p>构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。</p>
-<p>1.字符串序列拼接，拼接到尾部<br>append（数据）<br>insert（int offset，插入的数据）<br>delete（int start，int end）<br>deleteCharAt（int index）</p>
-<p>2.返回长度<br>int capacity（）返回当前容量<br>int length（）返回长度（字符数）</p>
+        <h4 id="StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0"><a href="#StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0" class="headerlink" title="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0"></a>StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0</h4><h4 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer()"></a>StringBuffer()</h4><h4 id="构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。"><a href="#构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。" class="headerlink" title="构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。"></a>构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。</h4><p>1.字符串序列拼接，拼接到尾部</p>
+<p>append（数据）</p>
+<p>insert（int offset，插入的数据）</p>
+<p>delete（int start，int end）</p>
+<p>deleteCharAt（int index）</p>
+<p>2.返回长度</p>
+<p>int capacity（）返回当前容量</p>
+<p>int length（）返回长度（字符数）</p>
 <p>3.查找</p>
 <ul>
 <li>char charAt（int index）</li>
 <li>int indexOf（String str）返回第一次出现的指定子字符串在该字符串中的索引</li>
 <li>int lastIndexOf（String str）</li>
 </ul>
-<p>4.其他<br>StringBuffer reverse（）<br>将此字符序列用其反转形式取代<br>replace（int start，int end。String str）</p>
+<p>4.其他</p>
+<p>StringBuffer reverse（）</p>
+<p>将此字符序列用其反转形式取代</p>
+<p>replace（int start，int end。String str）</p>
 <p>使用给定String中的字符替换此序列中的子字符串中的字符</p>
 <p>StringBuilder 一个可变的字符序列，效率快 jdk1.5</p>
-<p>StringBuilder() </p>
+<p>StringBuilder()</p>
 <p>构造一个不带任何字符的字符串生成器，其初始容量为 16 个字符。</p>
 <p>string stringbuffer stringbuilder区别：</p>
 <ul>
@@ -392,6 +399,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/概念/" rel="tag"># 概念</a>
+          
+        </div>
+      
 
       
       
@@ -401,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/31/统计字符串字母出现次数/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/2018/07/31/统计字符串字母出现次数/" rel="next" title="字符串">
+                <i class="fa fa-chevron-left"></i> 字符串
               </a>
             
           </div>
@@ -411,8 +424,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/01/八个基本数据类型 比byte short int long char double float Boolean/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/01/八个基本数据类型 比byte short int long char double float Boolean/" rel="prev" title="UUU">
+                UUU <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -465,8 +478,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -498,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -603,6 +625,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0"><span class="nav-number">1.</span> <span class="nav-text">StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuffer"><span class="nav-number">2.</span> <span class="nav-text">StringBuffer()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。"><span class="nav-number">3.</span> <span class="nav-text">构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
