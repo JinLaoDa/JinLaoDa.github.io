@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SuMo">
+<meta property="og:url" content="http://yoursite.com/2018/08/07/8-7Task/index.html">
+<meta property="og:site_name" content="SuMo">
+<meta property="og:description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-07T11:07:04.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="SuMo">
+<meta name="twitter:description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/08/07/8-7Task/"/>
+
+
+
+
+
+  <title> | SuMo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SuMo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/07/8-7Task/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Gao feng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/WechatIMG2.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SuMo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-07T17:52:50+08:00">
+                2018-08-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="1-编写异常类：空异常、年龄低异常、年龄高异常、-工资低异常、工资高异常、身份证非法异常。"><a href="#1-编写异常类：空异常、年龄低异常、年龄高异常、-工资低异常、工资高异常、身份证非法异常。" class="headerlink" title="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。"></a>1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。</h4><h4 id="2-编写一个员工类，"><a href="#2-编写一个员工类，" class="headerlink" title="2.编写一个员工类，"></a>2.编写一个员工类，</h4><p>(1) 有属性：</p>
+<p>编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额</p>
+<p>(2) 有构造器：</p>
+<p>构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60<br>抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。</p>
+<p>构造器2：设置工资，设置身份证号码；如果工资低于600，抛出工资低异常。</p>
+<p> (3) 有方法</p>
+<p>增加工资   addSalary(double addSalary)，抛出工资高异常，当增加后的工资大于员工工资总额时，抛出此异常。</p>
+<p>减少工资  minusSalary(double minusSalary), 抛出工资低异常，当减少后的工资低于政府最低工资时，抛出工资低异常。</p>
+<p>显示员工工资总额方法：showTotalSalary(), 抛出空异常，当工资总额为0时，抛出此异常。</p>
+<p>显示员工人数：void showTotalEmployee（），抛出空异常。当员工人数为0时，抛出此异常。        </p>
+<h4 id="2-编写一个程序实现以下功能："><a href="#2-编写一个程序实现以下功能：" class="headerlink" title="2    编写一个程序实现以下功能："></a>2    编写一个程序实现以下功能：</h4><p>（1）产生5000个1～9999之间的随机整数，将其存入文本文件a.txt中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import java.io.BufferedWriter;</span><br><span class="line">import java.io.FileNotFoundException;</span><br><span class="line">import java.io.FileOutputStream;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.OutputStreamWriter;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Random;</span><br><span class="line">public class Test &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">List&lt;Integer&gt; arr = new ArrayList&lt;Integer&gt;(5000);</span><br><span class="line">Random random = new Random();</span><br><span class="line">for (int i = 0; i &lt; 5000; i++) &#123;</span><br><span class="line">Integer r = null;</span><br><span class="line">do</span><br><span class="line">// 由于要求1～9999，所以得排除0的情况</span><br><span class="line">r = random.nextInt(10000);</span><br><span class="line">while (r == 0);</span><br><span class="line">arr.add(random.nextInt(10000));</span><br><span class="line">&#125;</span><br><span class="line">try &#123;</span><br><span class="line">BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(</span><br><span class="line">new FileOutputStream(&quot;C:\\a.txt&quot;)));</span><br><span class="line">for (Integer i : arr) &#123;</span><br><span class="line">bw.write(String.valueOf(i));</span><br><span class="line">bw.newLine();</span><br><span class="line">&#125;</span><br><span class="line">bw.close();</span><br><span class="line">&#125; catch (FileNotFoundException e) &#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125; catch (IOException e) &#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">```（2）从文件中读取这5000个整数，并计算其最大值、最小值和平均值并输出结果。</span><br></pre></td></tr></table></figure></p>
+<p>import java.io.BufferedReader;<br>import java.io.BufferedWriter;<br>import java.io.File;<br>import java.io.FileReader;<br>import java.io.FileWriter;<br>import java.util.Random;</p>
+<p>public class Demo17 {</p>
+<pre><code>public static void main(String[] args) throws Exception {
+
+    /*
+     * 编写一个程序实现以下功能：()考虑内存优化
+①产生5000个1～9999之间的随机整数，将其存入文本文件a.txt中。
+②从文件中读取这5000个整数，并计算其最大值、最小值和平均值并输出结果。
+     */
+
+    Random r = new Random();
+    File file = new File(&quot;G:/a/b/c/a.txt&quot;);
+    FileWriter fw = new FileWriter(file);
+    BufferedWriter bw = new BufferedWriter(fw);
+
+    for (int i = 0; i &lt; 5000; i++) {
+        bw.write((r.nextInt(9999)+1)+&quot;&quot;);
+        bw.newLine();
+        bw.flush();
+        fw.flush();
+
+    }
+    bw.close();
+    fw.close();
+
+    FileReader fr = new FileReader(file);
+    BufferedReader br = new BufferedReader(fr);
+    String s=&quot;&quot;;
+    int index=0;
+    int a[] = new int [5000];
+    while((s=br.readLine())!=null)
+    {
+        System.out.println(s);
+        a[index] = Integer.valueOf(s);
+        index++;
+    }
+
+    System.out.println(&quot;最大值：&quot;+GetMax(a));
+    br.close();
+    fr.close();
+}
+public static int GetMax(int [] a)
+{
+    int max = a[0];
+    for (int i = 1; i &lt; a.length; i++) {
+        if(a[i]&gt;max)
+        {
+            max =a[i];
+        }
+    }
+    return max;
+}
+</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 3	在电脑D盘下创建一个文件为HelloWorld.txt文件，判断他是文件还是目录，在创建一个目录IOTest,之后将HelloWorld.txt移动到IOTest目录下去；之后遍历IOTest这个目录下的文件</span><br></pre></td></tr></table></figure></p>
+<p>import java.io.File;<br>import java.io.IOException;</p>
+<p>public class Test1 {<br>    /**</p>
+<pre><code> * 1. 在电脑D盘下创建一个文件为HelloWorld.txt文件，
+ * 判断他是文件还是目录，再创建一个目录IOTest,
+ * 之后将HelloWorld.txt移动到IOTest目录下去；
+ * 之后遍历IOTest这个目录下的文件
+ * 
+ * 程序分析：
+ * 1、文件创建使用File的createNewFile()方法
+ * 2、判断是文件用isFile(),判断是目录用isDirectory
+ * 3、创建目录用：mkdirs()方法
+ * 4、移动文件用：renameTo
+ * 5、遍历目录用：list（）方法获得存放文件的数组，foreach遍历的方法把文件打印出来
+ * */
+public static void main(String[] args) {
+     //在电脑D盘下创建一个文件为HelloWorld.txt文件
+    File file=new File(&quot;D:&quot;,&quot;HelloWorld.txt&quot;);
+
+    //创建文件，返回一个布尔值
+    boolean isCreate;
+    try {
+        isCreate = file.createNewFile();
+        if (isCreate) {
+            System.out.println(&quot;创建文件成功！&quot;);
+        }else {
+            System.out.println(&quot;创建文件失败！文件已经存在&quot;);
+        }
+    } catch (IOException e) {
+        System.out.println(&quot;创建文件失败！&quot;);
+    }
+
+    // 判断他是文件还是目录，
+    if (file.isFile()) {
+        System.out.println(&quot;这是一个文件&quot;);
+    } else {
+        System.out.println(&quot;这是一个目录&quot;);
+    }
+
+    //再创建一个目录IOTest
+    File file2=new File(&quot;D:/IOTest&quot;);
+    file2.mkdirs();
+
+    //HelloWorld.txt移动到IOTest目录下去?失败？》
+    if (file.renameTo(file2)) {
+        System.out.println(&quot;文件移动成功！&quot;);
+    } else {
+        System.out.println(&quot;文件移动失败&quot;);
+    }
+
+    //遍历IOTest目录下的文件
+    String[] arr=file2.list();
+    for (String string : arr) {
+        System.out.println(string);
+    }
+}
+</code></pre><p>}</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 4	递归实现输入任意目录，列出文件以及文件夹</span><br></pre></td></tr></table></figure>
+<p>import java.io.File;<br>import java.io.IOException;<br>public class Test1 {<br>    /**</p>
+<pre><code> * 1. 在电脑D盘下创建一个文件为HelloWorld.txt文件，
+ * 判断他是文件还是目录，再创建一个目录IOTest,
+ * 之后将HelloWorld.txt移动到IOTest目录下去；
+ * 之后遍历IOTest这个目录下的文件
+ * 
+ * 程序分析：
+ * 1、文件创建使用File的createNewFile()方法
+ * 2、判断是文件用isFile(),判断是目录用isDirectory
+ * 3、创建目录用：mkdirs()方法
+ * 4、移动文件用：renameTo
+ * 5、遍历目录用：list（）方法获得存放文件的数组，foreach遍历的方法把文件打印出来
+ * */
+public static void main(String[] args) {
+     //在电脑D盘下创建一个文件为HelloWorld.txt文件
+    File file=new File(&quot;D:&quot;,&quot;HelloWorld.txt&quot;);
+
+    //创建文件，返回一个布尔值
+    boolean isCreate;
+    try {
+        isCreate = file.createNewFile();
+        if (isCreate) {
+            System.out.println(&quot;创建文件成功！&quot;);
+        }else {
+            System.out.println(&quot;创建文件失败！文件已经存在&quot;);
+        }
+    } catch (IOException e) {
+        System.out.println(&quot;创建文件失败！&quot;);
+    }
+
+    // 判断他是文件还是目录，
+    if (file.isFile()) {
+        System.out.println(&quot;这是一个文件&quot;);
+    } else {
+        System.out.println(&quot;这是一个目录&quot;);
+    }
+
+    //再创建一个目录IOTest
+    File file2=new File(&quot;D:/IOTest&quot;);
+    file2.mkdirs();
+
+    //HelloWorld.txt移动到IOTest目录下去?失败？》
+    if (file.renameTo(file2)) {
+        System.out.println(&quot;文件移动成功！&quot;);
+    } else {
+        System.out.println(&quot;文件移动失败&quot;);
+    }
+
+    //遍历IOTest目录下的文件
+    String[] arr=file2.list();
+    for (String string : arr) {
+        System.out.println(string);
+    }
+}
+</code></pre><p>}<br>主方法调用类</p>
+<p>import java.io.File;<br>import java.util.List;</p>
+<p>public class Test2 {<br>    /**</p>
+<pre><code> * 递归实现输入任意目录，列出文件以及文件夹
+ * 
+ * 设计：在FileUtils类里面实现了逻辑操作，在另一边调用就可以了
+ * */
+public static void main(String[] args) {
+     //比如输入D盘
+    Listlist=FileUtils.getAllFiles(&quot;D:&quot;);
+    //输出所有的文件和文件夹的名字
+    for (File file : list) {
+        System.out.println(file);
+    }
+
+}
+</code></pre><p>}</p>
+<p><code>`</code>    </p>
+<h4 id="5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。"><a href="#5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。" class="headerlink" title="5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。"></a>5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">//Bank类</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class Bank &#123;</span><br><span class="line">private double balance;</span><br><span class="line"></span><br><span class="line">Bank(double a) &#123;</span><br><span class="line">balance += a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void withDrawal(double dAmount) throws InsufficientFundsException, NagativeFundsException &#123;</span><br><span class="line">if(dAmount&lt;0) </span><br><span class="line">throw new InsufficientFundsException(dAmount);</span><br><span class="line">if(dAmount&gt;balance)</span><br><span class="line">throw new NagativeFundsException();</span><br><span class="line">System.out.println(&quot;取款：&quot;+dAmount);</span><br><span class="line">this.balance-=dAmount;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///InsufficientFundsException</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class InsufficientFundsException extends Exception &#123;</span><br><span class="line">InsufficientFundsException(double i)</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;发生错误：&quot;+&quot;取款额&quot;+i+&quot;为负数。&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///NagativeFundsException</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class NagativeFundsException extends Exception &#123;</span><br><span class="line">NagativeFundsException()</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;超出余额：&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class NagativeFundsException extends Exception &#123;</span><br><span class="line">NagativeFundsException()</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;超出余额：&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//测试主类</span><br><span class="line"></span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class TestBank &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">Bank b=new Bank(100);</span><br><span class="line">try&#123;</span><br><span class="line">b.withDrawal(-15);</span><br><span class="line">&#125;</span><br><span class="line">catch(InsufficientFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">catch(NagativeFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">try&#123;</span><br><span class="line">b.withDrawal(150);</span><br><span class="line">&#125;</span><br><span class="line">catch(InsufficientFundsException | NagativeFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">//运行结果</span><br><span class="line"></span><br><span class="line">发生错误：取款额-15.0为负数。 ///withdrawal调用的构造函数</span><br><span class="line">d0923.InsufficientFundsException</span><br><span class="line">at d0923.Bank.withDrawal(Bank.java:12) /// printStack</span><br><span class="line">at d0923.TestBank.main(TestBank.java:8)</span><br><span class="line">超出余额：</span><br><span class="line">d0923.NagativeFundsException</span><br><span class="line">at d0923.Bank.withDrawal(Bank.java:14)</span><br><span class="line">at d0923.TestBank.main(TestBank.java:20)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/07/单元测试/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/WechatIMG2.jpg"
+                alt="Gao feng" />
+            
+              <p class="site-author-name" itemprop="name">Gao feng</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-编写异常类：空异常、年龄低异常、年龄高异常、-工资低异常、工资高异常、身份证非法异常。"><span class="nav-number">1.</span> <span class="nav-text">1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-编写一个员工类，"><span class="nav-number">2.</span> <span class="nav-text">2.编写一个员工类，</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-编写一个程序实现以下功能："><span class="nav-number">3.</span> <span class="nav-text">2    编写一个程序实现以下功能：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。"><span class="nav-number">4.</span> <span class="nav-text">5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Gao feng</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

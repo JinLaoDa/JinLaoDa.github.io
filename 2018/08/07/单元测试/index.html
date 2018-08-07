@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="SuMo">
 <meta property="og:description" content="单元测试原因：main运行才知道有问题-&amp;gt;每个方法自己测试：单元测试 白盒测试：代码相关，单元测试，测试单个方法 黑盒测试：用户测试（自动化）  JAVA只能提供简单的功能API，不提供测试；测试厂商来完成测试方面（第三方架包，类库） 1.导入类库junit4.9 2.测试方法（必须无返回值，无参数）如果有返回值和参数，在定义一个测试方法包裹一下  File类获得文件夹中的文件public">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T07:27:52.000Z">
+<meta property="og:updated_time" content="2018-08-07T08:33:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SuMo">
 <meta name="twitter:description" content="单元测试原因：main运行才知道有问题-&amp;gt;每个方法自己测试：单元测试 白盒测试：代码相关，单元测试，测试单个方法 黑盒测试：用户测试（自动化）  JAVA只能提供简单的功能API，不提供测试；测试厂商来完成测试方面（第三方架包，类库） 1.导入类库junit4.9 2.测试方法（必须无返回值，无参数）如果有返回值和参数，在定义一个测试方法包裹一下  File类获得文件夹中的文件public">
@@ -381,6 +381,15 @@ file.delete();//如果还存在，删除自己
 <p>小说：发给你<br>视频：发给你</p>
 <p>单位：计算机以什么单位存储 字节 8bit 8个01组成</p>
 <p>小说，一个个字节发给你：网络 1m=1024kb 1kb=1024b</p>
+<h3 id="中文乱码："><a href="#中文乱码：" class="headerlink" title="中文乱码："></a>中文乱码：</h3><p>####设备与设备之间的传输问题</p>
+<p>中文不是一个字节，是多个字节</p>
+<p>##编码方式：</p>
+<ul>
+<li>ASCII:一个字节，存储字母，表达的东西比较少</li>
+<li>Unicode：2个字节 前一个字节是ASCII,后面是补充（中文）<br>2个字节存储还是有限</li>
+<li>utf-8：三个字节，存储中文，一个中文三个字节</li>
+<li>GBK：表示中文，一个中文两个字节</li>
+</ul>
 
       
     </div>
@@ -414,6 +423,10 @@ file.delete();//如果还存在，删除自己
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/07/8-7Task/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -494,7 +507,7 @@ file.delete();//如果还存在，删除自己
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -540,7 +553,7 @@ file.delete();//如果还存在，删除自己
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单元测试"><span class="nav-number">1.</span> <span class="nav-text">单元测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原因：main运行才知道有问题-gt-每个方法自己测试：单元测试"><span class="nav-number">1.1.</span> <span class="nav-text">原因：main运行才知道有问题-&gt;每个方法自己测试：单元测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JAVA只能提供简单的功能API，不提供测试；测试厂商来完成测试方面（第三方架包，类库）"><span class="nav-number">1.1.1.</span> <span class="nav-text">JAVA只能提供简单的功能API，不提供测试；测试厂商来完成测试方面（第三方架包，类库）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File类获得文件夹中的文件"><span class="nav-number">1.1.2.</span> <span class="nav-text">File类获得文件夹中的文件</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单元测试"><span class="nav-number">1.</span> <span class="nav-text">单元测试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#原因：main运行才知道有问题-gt-每个方法自己测试：单元测试"><span class="nav-number">1.1.</span> <span class="nav-text">原因：main运行才知道有问题-&gt;每个方法自己测试：单元测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JAVA只能提供简单的功能API，不提供测试；测试厂商来完成测试方面（第三方架包，类库）"><span class="nav-number">1.1.1.</span> <span class="nav-text">JAVA只能提供简单的功能API，不提供测试；测试厂商来完成测试方面（第三方架包，类库）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#File类获得文件夹中的文件"><span class="nav-number">1.1.2.</span> <span class="nav-text">File类获得文件夹中的文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文乱码："><span class="nav-number">1.1.3.</span> <span class="nav-text">中文乱码：</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
