@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="概念," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -81,18 +81,17 @@
 
 
 
-<meta name="description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
-<meta name="keywords" content="概念">
+<meta name="description" content="学生：姓名，数学成绩，语文成绩，英语成绩 要求总分排序，从低到高， 如果总分相等，按数学成绩排序，数学成绩相等，语文成绩排序，语文成绩相等，按姓名排序 将一个对象">
 <meta property="og:type" content="article">
-<meta property="og:title" content="链表">
-<meta property="og:url" content="http://jinlaoda.com/2018/08/03/数据/index.html">
+<meta property="og:title" content="SuMo">
+<meta property="og:url" content="http://jinlaoda.com/2018/08/08/未命名2/index.html">
 <meta property="og:site_name" content="SuMo">
-<meta property="og:description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
+<meta property="og:description" content="学生：姓名，数学成绩，语文成绩，英语成绩 要求总分排序，从低到高， 如果总分相等，按数学成绩排序，数学成绩相等，语文成绩排序，语文成绩相等，按姓名排序 将一个对象">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T12:22:52.000Z">
+<meta property="og:updated_time" content="2018-08-03T07:44:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="链表">
-<meta name="twitter:description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
+<meta name="twitter:title" content="SuMo">
+<meta name="twitter:description" content="学生：姓名，数学成绩，语文成绩，英语成绩 要求总分排序，从低到高， 如果总分相等，按数学成绩排序，数学成绩相等，语文成绩排序，语文成绩相等，按姓名排序 将一个对象">
 
 
 
@@ -122,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://jinlaoda.com/2018/08/03/数据/"/>
+  <link rel="canonical" href="http://jinlaoda.com/2018/08/08/未命名2/"/>
 
 
 
 
 
-  <title>链表 | SuMo</title>
+  <title> | SuMo</title>
   
 
 
@@ -289,7 +288,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jinlaoda.com/2018/08/03/数据/">
+    <link itemprop="mainEntityOfPage" href="http://jinlaoda.com/2018/08/08/未命名2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gao feng">
@@ -306,7 +305,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">链表</h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -318,8 +317,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-03T10:58:50+08:00">
-                2018-08-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-08T19:55:45+08:00">
+                2018-08-08
               </time>
             
 
@@ -356,13 +355,10 @@
       
 
       
-        <p>###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费</p>
-<h3 id="改进：数据不存在一起（物理分离），逻辑上是连续的"><a href="#改进：数据不存在一起（物理分离），逻辑上是连续的" class="headerlink" title="改进：数据不存在一起（物理分离），逻辑上是连续的"></a>改进：数据不存在一起（物理分离），逻辑上是连续的</h3><p>##链式，链表</p>
-<ul>
-<li>如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候</li>
-<li>如果查询比价频繁，使用Arraylist（员工系统）</li>
-</ul>
-<h3 id="List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据"><a href="#List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据" class="headerlink" title="List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据"></a>List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据</h3>
+        <p>学生：姓名，数学成绩，语文成绩，英语成绩 要求总分排序，从低到高，</p>
+<p>如果总分相等，按数学成绩排序，数学成绩相等，语文成绩排序，语文成绩相等，按姓名排序</p>
+<p>将一个对象</p>
+
       
     </div>
     
@@ -377,12 +373,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/概念/" rel="tag"># 概念</a>
-          
-        </div>
-      
 
       
       
@@ -392,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/02/Java日期时间/" rel="next" title="Java日期时间">
-                <i class="fa fa-chevron-left"></i> Java日期时间
+              <a href="/2018/08/08/未命名1/" rel="next" title="Canlender抽象类">
+                <i class="fa fa-chevron-left"></i> Canlender抽象类
               </a>
             
           </div>
@@ -402,8 +392,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/03/未命名2/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/08/统计字符串字母出现次数/" rel="prev" title="字符串">
+                字符串 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -456,17 +446,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -603,22 +584,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#改进：数据不存在一起（物理分离），逻辑上是连续的"><span class="nav-number">1.</span> <span class="nav-text">改进：数据不存在一起（物理分离），逻辑上是连续的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据"><span class="nav-number">2.</span> <span class="nav-text">List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

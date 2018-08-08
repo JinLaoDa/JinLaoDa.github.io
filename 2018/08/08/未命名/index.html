@@ -70,7 +70,7 @@
 
 
 
-  <meta name="keywords" content="Task," />
+  <meta name="keywords" content="概念," />
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
-<meta name="keywords" content="Task">
+<meta name="description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
+<meta name="keywords" content="概念">
 <meta property="og:type" content="article">
-<meta property="og:title" content="8-7-Task">
-<meta property="og:url" content="http://jinlaoda.com/2018/08/07/8-7Task/index.html">
+<meta property="og:title" content="StringBuffer和StringBuilder">
+<meta property="og:url" content="http://jinlaoda.com/2018/08/08/未命名/index.html">
 <meta property="og:site_name" content="SuMo">
-<meta property="og:description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
+<meta property="og:description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T12:23:01.000Z">
+<meta property="og:updated_time" content="2018-08-07T12:22:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="8-7-Task">
-<meta name="twitter:description" content="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性： 编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额 (2) 有构造器： 构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。 构造器2：设置工资，设置身份证号码；如果工资低于">
+<meta name="twitter:title" content="StringBuffer和StringBuilder">
+<meta name="twitter:description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://jinlaoda.com/2018/08/07/8-7Task/"/>
+  <link rel="canonical" href="http://jinlaoda.com/2018/08/08/未命名/"/>
 
 
 
 
 
-  <title>8-7-Task | SuMo</title>
+  <title>StringBuffer和StringBuilder | SuMo</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jinlaoda.com/2018/08/07/8-7Task/">
+    <link itemprop="mainEntityOfPage" href="http://jinlaoda.com/2018/08/08/未命名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gao feng">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">8-7-Task</h1>
+          <h1 class="post-title" itemprop="name headline">StringBuffer和StringBuilder</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-07T17:52:50+08:00">
-                2018-08-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-08T19:55:45+08:00">
+                2018-08-08
               </time>
             
 
@@ -356,200 +356,34 @@
       
 
       
-        <h4 id="1-编写异常类：空异常、年龄低异常、年龄高异常、-工资低异常、工资高异常、身份证非法异常。"><a href="#1-编写异常类：空异常、年龄低异常、年龄高异常、-工资低异常、工资高异常、身份证非法异常。" class="headerlink" title="1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。"></a>1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。</h4><h4 id="2-编写一个员工类，"><a href="#2-编写一个员工类，" class="headerlink" title="2.编写一个员工类，"></a>2.编写一个员工类，</h4><p>(1) 有属性：</p>
-<p>编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额</p>
-<p>(2) 有构造器：</p>
-<p>构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60<br>抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。</p>
-<p>构造器2：设置工资，设置身份证号码；如果工资低于600，抛出工资低异常。</p>
-<p> (3) 有方法</p>
-<p>增加工资   addSalary(double addSalary)，抛出工资高异常，当增加后的工资大于员工工资总额时，抛出此异常。</p>
-<p>减少工资  minusSalary(double minusSalary), 抛出工资低异常，当减少后的工资低于政府最低工资时，抛出工资低异常。</p>
-<p>显示员工工资总额方法：showTotalSalary(), 抛出空异常，当工资总额为0时，抛出此异常。</p>
-<p>显示员工人数：void showTotalEmployee（），抛出空异常。当员工人数为0时，抛出此异常。        </p>
-<h4 id="2-编写一个程序实现以下功能："><a href="#2-编写一个程序实现以下功能：" class="headerlink" title="2    编写一个程序实现以下功能："></a>2    编写一个程序实现以下功能：</h4><p>（1）产生5000个1～9999之间的随机整数，将其存入文本文件a.txt中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">import java.io.BufferedWriter;</span><br><span class="line">import java.io.FileNotFoundException;</span><br><span class="line">import java.io.FileOutputStream;</span><br><span class="line">import java.io.IOException;</span><br><span class="line">import java.io.OutputStreamWriter;</span><br><span class="line">import java.util.ArrayList;</span><br><span class="line">import java.util.List;</span><br><span class="line">import java.util.Random;</span><br><span class="line">public class Test &#123;</span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">List&lt;Integer&gt; arr = new ArrayList&lt;Integer&gt;(5000);</span><br><span class="line">Random random = new Random();</span><br><span class="line">for (int i = 0; i &lt; 5000; i++) &#123;</span><br><span class="line">Integer r = null;</span><br><span class="line">do</span><br><span class="line">// 由于要求1～9999，所以得排除0的情况</span><br><span class="line">r = random.nextInt(10000);</span><br><span class="line">while (r == 0);</span><br><span class="line">arr.add(random.nextInt(10000));</span><br><span class="line">&#125;</span><br><span class="line">try &#123;</span><br><span class="line">BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(</span><br><span class="line">new FileOutputStream(&quot;C:\\a.txt&quot;)));</span><br><span class="line">for (Integer i : arr) &#123;</span><br><span class="line">bw.write(String.valueOf(i));</span><br><span class="line">bw.newLine();</span><br><span class="line">&#125;</span><br><span class="line">bw.close();</span><br><span class="line">&#125; catch (FileNotFoundException e) &#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125; catch (IOException e) &#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">```（2）从文件中读取这5000个整数，并计算其最大值、最小值和平均值并输出结果。</span><br></pre></td></tr></table></figure></p>
-<p>import java.io.BufferedReader;<br>import java.io.BufferedWriter;<br>import java.io.File;<br>import java.io.FileReader;<br>import java.io.FileWriter;<br>import java.util.Random;</p>
-<p>public class Demo17 {</p>
-<pre><code>public static void main(String[] args) throws Exception {
-
-    /*
-     * 编写一个程序实现以下功能：()考虑内存优化
-①产生5000个1～9999之间的随机整数，将其存入文本文件a.txt中。
-②从文件中读取这5000个整数，并计算其最大值、最小值和平均值并输出结果。
-     */
-
-    Random r = new Random();
-    File file = new File(&quot;G:/a/b/c/a.txt&quot;);
-    FileWriter fw = new FileWriter(file);
-    BufferedWriter bw = new BufferedWriter(fw);
-
-    for (int i = 0; i &lt; 5000; i++) {
-        bw.write((r.nextInt(9999)+1)+&quot;&quot;);
-        bw.newLine();
-        bw.flush();
-        fw.flush();
-
-    }
-    bw.close();
-    fw.close();
-
-    FileReader fr = new FileReader(file);
-    BufferedReader br = new BufferedReader(fr);
-    String s=&quot;&quot;;
-    int index=0;
-    int a[] = new int [5000];
-    while((s=br.readLine())!=null)
-    {
-        System.out.println(s);
-        a[index] = Integer.valueOf(s);
-        index++;
-    }
-
-    System.out.println(&quot;最大值：&quot;+GetMax(a));
-    br.close();
-    fr.close();
-}
-public static int GetMax(int [] a)
-{
-    int max = a[0];
-    for (int i = 1; i &lt; a.length; i++) {
-        if(a[i]&gt;max)
-        {
-            max =a[i];
-        }
-    }
-    return max;
-}
-</code></pre><p>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 3	在电脑D盘下创建一个文件为HelloWorld.txt文件，判断他是文件还是目录，在创建一个目录IOTest,之后将HelloWorld.txt移动到IOTest目录下去；之后遍历IOTest这个目录下的文件</span><br></pre></td></tr></table></figure></p>
-<p>import java.io.File;<br>import java.io.IOException;</p>
-<p>public class Test1 {<br>    /**</p>
-<pre><code> * 1. 在电脑D盘下创建一个文件为HelloWorld.txt文件，
- * 判断他是文件还是目录，再创建一个目录IOTest,
- * 之后将HelloWorld.txt移动到IOTest目录下去；
- * 之后遍历IOTest这个目录下的文件
- *
- * 程序分析：
- * 1、文件创建使用File的createNewFile()方法
- * 2、判断是文件用isFile(),判断是目录用isDirectory
- * 3、创建目录用：mkdirs()方法
- * 4、移动文件用：renameTo
- * 5、遍历目录用：list（）方法获得存放文件的数组，foreach遍历的方法把文件打印出来
- * */
-public static void main(String[] args) {
-     //在电脑D盘下创建一个文件为HelloWorld.txt文件
-    File file=new File(&quot;D:&quot;,&quot;HelloWorld.txt&quot;);
-
-    //创建文件，返回一个布尔值
-    boolean isCreate;
-    try {
-        isCreate = file.createNewFile();
-        if (isCreate) {
-            System.out.println(&quot;创建文件成功！&quot;);
-        }else {
-            System.out.println(&quot;创建文件失败！文件已经存在&quot;);
-        }
-    } catch (IOException e) {
-        System.out.println(&quot;创建文件失败！&quot;);
-    }
-
-    // 判断他是文件还是目录，
-    if (file.isFile()) {
-        System.out.println(&quot;这是一个文件&quot;);
-    } else {
-        System.out.println(&quot;这是一个目录&quot;);
-    }
-
-    //再创建一个目录IOTest
-    File file2=new File(&quot;D:/IOTest&quot;);
-    file2.mkdirs();
-
-    //HelloWorld.txt移动到IOTest目录下去?失败？》
-    if (file.renameTo(file2)) {
-        System.out.println(&quot;文件移动成功！&quot;);
-    } else {
-        System.out.println(&quot;文件移动失败&quot;);
-    }
-
-    //遍历IOTest目录下的文件
-    String[] arr=file2.list();
-    for (String string : arr) {
-        System.out.println(string);
-    }
-}
-</code></pre><p>}</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#### 4	递归实现输入任意目录，列出文件以及文件夹</span><br></pre></td></tr></table></figure>
-<p>import java.io.File;<br>import java.io.IOException;<br>public class Test1 {<br>    /**</p>
-<pre><code> * 1. 在电脑D盘下创建一个文件为HelloWorld.txt文件，
- * 判断他是文件还是目录，再创建一个目录IOTest,
- * 之后将HelloWorld.txt移动到IOTest目录下去；
- * 之后遍历IOTest这个目录下的文件
- *
- * 程序分析：
- * 1、文件创建使用File的createNewFile()方法
- * 2、判断是文件用isFile(),判断是目录用isDirectory
- * 3、创建目录用：mkdirs()方法
- * 4、移动文件用：renameTo
- * 5、遍历目录用：list（）方法获得存放文件的数组，foreach遍历的方法把文件打印出来
- * */
-public static void main(String[] args) {
-     //在电脑D盘下创建一个文件为HelloWorld.txt文件
-    File file=new File(&quot;D:&quot;,&quot;HelloWorld.txt&quot;);
-
-    //创建文件，返回一个布尔值
-    boolean isCreate;
-    try {
-        isCreate = file.createNewFile();
-        if (isCreate) {
-            System.out.println(&quot;创建文件成功！&quot;);
-        }else {
-            System.out.println(&quot;创建文件失败！文件已经存在&quot;);
-        }
-    } catch (IOException e) {
-        System.out.println(&quot;创建文件失败！&quot;);
-    }
-
-    // 判断他是文件还是目录，
-    if (file.isFile()) {
-        System.out.println(&quot;这是一个文件&quot;);
-    } else {
-        System.out.println(&quot;这是一个目录&quot;);
-    }
-
-    //再创建一个目录IOTest
-    File file2=new File(&quot;D:/IOTest&quot;);
-    file2.mkdirs();
-
-    //HelloWorld.txt移动到IOTest目录下去?失败？》
-    if (file.renameTo(file2)) {
-        System.out.println(&quot;文件移动成功！&quot;);
-    } else {
-        System.out.println(&quot;文件移动失败&quot;);
-    }
-
-    //遍历IOTest目录下的文件
-    String[] arr=file2.list();
-    for (String string : arr) {
-        System.out.println(string);
-    }
-}
-</code></pre><p>}<br>主方法调用类</p>
-<p>import java.io.File;<br>import java.util.List;</p>
-<p>public class Test2 {<br>    /**</p>
-<pre><code> * 递归实现输入任意目录，列出文件以及文件夹
- *
- * 设计：在FileUtils类里面实现了逻辑操作，在另一边调用就可以了
- * */
-public static void main(String[] args) {
-     //比如输入D盘
-    Listlist=FileUtils.getAllFiles(&quot;D:&quot;);
-    //输出所有的文件和文件夹的名字
-    for (File file : list) {
-        System.out.println(file);
-    }
-
-}
-</code></pre><p>}</p>
-<p><code>`</code></p>
-<h4 id="5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。"><a href="#5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。" class="headerlink" title="5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。"></a>5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line">//Bank类</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class Bank &#123;</span><br><span class="line">private double balance;</span><br><span class="line"></span><br><span class="line">Bank(double a) &#123;</span><br><span class="line">balance += a;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void withDrawal(double dAmount) throws InsufficientFundsException, NagativeFundsException &#123;</span><br><span class="line">if(dAmount&lt;0)</span><br><span class="line">throw new InsufficientFundsException(dAmount);</span><br><span class="line">if(dAmount&gt;balance)</span><br><span class="line">throw new NagativeFundsException();</span><br><span class="line">System.out.println(&quot;取款：&quot;+dAmount);</span><br><span class="line">this.balance-=dAmount;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///InsufficientFundsException</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class InsufficientFundsException extends Exception &#123;</span><br><span class="line">InsufficientFundsException(double i)</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;发生错误：&quot;+&quot;取款额&quot;+i+&quot;为负数。&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">///NagativeFundsException</span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class NagativeFundsException extends Exception &#123;</span><br><span class="line">NagativeFundsException()</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;超出余额：&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class NagativeFundsException extends Exception &#123;</span><br><span class="line">NagativeFundsException()</span><br><span class="line">&#123;</span><br><span class="line">System.out.println(&quot;超出余额：&quot;);</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//测试主类</span><br><span class="line"></span><br><span class="line">package d0923;</span><br><span class="line"></span><br><span class="line">public class TestBank &#123;</span><br><span class="line"></span><br><span class="line">public static void main(String[] args) &#123;</span><br><span class="line">Bank b=new Bank(100);</span><br><span class="line">try&#123;</span><br><span class="line">b.withDrawal(-15);</span><br><span class="line">&#125;</span><br><span class="line">catch(InsufficientFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line">catch(NagativeFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">try&#123;</span><br><span class="line">b.withDrawal(150);</span><br><span class="line">&#125;</span><br><span class="line">catch(InsufficientFundsException | NagativeFundsException e)</span><br><span class="line">&#123;</span><br><span class="line">e.printStackTrace();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">//运行结果</span><br><span class="line"></span><br><span class="line">发生错误：取款额-15.0为负数。 ///withdrawal调用的构造函数</span><br><span class="line">d0923.InsufficientFundsException</span><br><span class="line">at d0923.Bank.withDrawal(Bank.java:12) /// printStack</span><br><span class="line">at d0923.TestBank.main(TestBank.java:8)</span><br><span class="line">超出余额：</span><br><span class="line">d0923.NagativeFundsException</span><br><span class="line">at d0923.Bank.withDrawal(Bank.java:14)</span><br><span class="line">at d0923.TestBank.main(TestBank.java:20)</span><br></pre></td></tr></table></figure>
+        <h4 id="StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0"><a href="#StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0" class="headerlink" title="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0"></a>StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0</h4><h4 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer()"></a>StringBuffer()</h4><h4 id="构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。"><a href="#构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。" class="headerlink" title="构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。"></a>构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。</h4><p>1.字符串序列拼接，拼接到尾部</p>
+<p>append（数据）</p>
+<p>insert（int offset，插入的数据）</p>
+<p>delete（int start，int end）</p>
+<p>deleteCharAt（int index）</p>
+<p>2.返回长度</p>
+<p>int capacity（）返回当前容量</p>
+<p>int length（）返回长度（字符数）</p>
+<p>3.查找</p>
+<ul>
+<li>char charAt（int index）</li>
+<li>int indexOf（String str）返回第一次出现的指定子字符串在该字符串中的索引</li>
+<li>int lastIndexOf（String str）</li>
+</ul>
+<p>4.其他</p>
+<p>StringBuffer reverse（）</p>
+<p>将此字符序列用其反转形式取代</p>
+<p>replace（int start，int end。String str）</p>
+<p>使用给定String中的字符替换此序列中的子字符串中的字符</p>
+<p>StringBuilder 一个可变的字符序列，效率快 jdk1.5</p>
+<p>StringBuilder()</p>
+<p>构造一个不带任何字符的字符串生成器，其初始容量为 16 个字符。</p>
+<p>string stringbuffer stringbuilder区别：</p>
+<ul>
+<li>string字符串常量一旦定义内容不可变</li>
+<li>buffer线程安全</li>
+<li>builder线程不安全</li>
+</ul>
 
       
     </div>
@@ -567,7 +401,7 @@ public static void main(String[] args) {
       
         <div class="post-tags">
           
-            <a href="/tags/Task/" rel="tag"># Task</a>
+            <a href="/tags/概念/" rel="tag"># 概念</a>
           
         </div>
       
@@ -580,8 +414,8 @@ public static void main(String[] args) {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/07/单元测试/" rel="next" title="单元测试">
-                <i class="fa fa-chevron-left"></i> 单元测试
+              <a href="/2018/08/08/数据/" rel="next" title="链表">
+                <i class="fa fa-chevron-left"></i> 链表
               </a>
             
           </div>
@@ -589,6 +423,10 @@ public static void main(String[] args) {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/08/未命名1/" rel="prev" title="Canlender抽象类">
+                Canlender抽象类 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -797,7 +635,7 @@ public static void main(String[] args) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-编写异常类：空异常、年龄低异常、年龄高异常、-工资低异常、工资高异常、身份证非法异常。"><span class="nav-number">1.</span> <span class="nav-text">1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-编写一个员工类，"><span class="nav-number">2.</span> <span class="nav-text">2.编写一个员工类，</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-编写一个程序实现以下功能："><span class="nav-number">3.</span> <span class="nav-text">2    编写一个程序实现以下功能：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-建立exception包，建立Bank类，类中有变量double-balance表示存款-Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal-double-dAmount-当取款的数额大于存款时-抛出InsufficientFundsException-取款数额为负数，抛出NagativeFundsException-如new-Bank-100-表示存入银行100元，当用方法withdrawal-150-，withdrawal-15-时会抛出自定义异常。"><span class="nav-number">4.</span> <span class="nav-text">5    建立exception包，建立Bank类，类中有变量double balance表示存款,Bank类的构造方法能增加存款，Bank类中有取款的发方法withDrawal(double dAmount),当取款的数额大于存款时,抛出InsufficientFundsException,取款数额为负数，抛出NagativeFundsException,如new Bank(100),表示存入银行100元，当用方法withdrawal(150)，withdrawal(-15)时会抛出自定义异常。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0"><span class="nav-number">1.</span> <span class="nav-text">StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuffer"><span class="nav-number">2.</span> <span class="nav-text">StringBuffer()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。"><span class="nav-number">3.</span> <span class="nav-text">构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。</span></a></li></ol></div>
             
 
           </div>

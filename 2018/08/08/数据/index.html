@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
+<meta name="description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
 <meta name="keywords" content="概念">
 <meta property="og:type" content="article">
-<meta property="og:title" content="StringBuffer和StringBuilder">
-<meta property="og:url" content="http://jinlaoda.com/2018/07/31/未命名/index.html">
+<meta property="og:title" content="链表">
+<meta property="og:url" content="http://jinlaoda.com/2018/08/08/数据/index.html">
 <meta property="og:site_name" content="SuMo">
-<meta property="og:description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
+<meta property="og:description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T12:22:55.000Z">
+<meta property="og:updated_time" content="2018-08-07T12:22:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="StringBuffer和StringBuilder">
-<meta name="twitter:description" content="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部 append（数据） insert（int offset，插入的数据） delete（int start，int end） deleteCharAt（int index） 2.返回长度 int capaci">
+<meta name="twitter:title" content="链表">
+<meta name="twitter:description" content="###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费 改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表  如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候 如果查询比价频繁，使用Arraylist（员工系统）  List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://jinlaoda.com/2018/07/31/未命名/"/>
+  <link rel="canonical" href="http://jinlaoda.com/2018/08/08/数据/"/>
 
 
 
 
 
-  <title>StringBuffer和StringBuilder | SuMo</title>
+  <title>链表 | SuMo</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://jinlaoda.com/2018/07/31/未命名/">
+    <link itemprop="mainEntityOfPage" href="http://jinlaoda.com/2018/08/08/数据/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gao feng">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">StringBuffer和StringBuilder</h1>
+          <h1 class="post-title" itemprop="name headline">链表</h1>
         
 
         <div class="post-meta">
@@ -318,8 +318,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-31T18:20:00+08:00">
-                2018-07-31
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-08-08T19:55:45+08:00">
+                2018-08-08
               </time>
             
 
@@ -356,35 +356,13 @@
       
 
       
-        <h4 id="StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0"><a href="#StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0" class="headerlink" title="StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0"></a>StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0</h4><h4 id="StringBuffer"><a href="#StringBuffer" class="headerlink" title="StringBuffer()"></a>StringBuffer()</h4><h4 id="构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。"><a href="#构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。" class="headerlink" title="构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。"></a>构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。</h4><p>1.字符串序列拼接，拼接到尾部</p>
-<p>append（数据）</p>
-<p>insert（int offset，插入的数据）</p>
-<p>delete（int start，int end）</p>
-<p>deleteCharAt（int index）</p>
-<p>2.返回长度</p>
-<p>int capacity（）返回当前容量</p>
-<p>int length（）返回长度（字符数）</p>
-<p>3.查找</p>
+        <p>###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费</p>
+<h3 id="改进：数据不存在一起（物理分离），逻辑上是连续的"><a href="#改进：数据不存在一起（物理分离），逻辑上是连续的" class="headerlink" title="改进：数据不存在一起（物理分离），逻辑上是连续的"></a>改进：数据不存在一起（物理分离），逻辑上是连续的</h3><p>##链式，链表</p>
 <ul>
-<li>char charAt（int index）</li>
-<li>int indexOf（String str）返回第一次出现的指定子字符串在该字符串中的索引</li>
-<li>int lastIndexOf（String str）</li>
+<li>如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候</li>
+<li>如果查询比价频繁，使用Arraylist（员工系统）</li>
 </ul>
-<p>4.其他</p>
-<p>StringBuffer reverse（）</p>
-<p>将此字符序列用其反转形式取代</p>
-<p>replace（int start，int end。String str）</p>
-<p>使用给定String中的字符替换此序列中的子字符串中的字符</p>
-<p>StringBuilder 一个可变的字符序列，效率快 jdk1.5</p>
-<p>StringBuilder()</p>
-<p>构造一个不带任何字符的字符串生成器，其初始容量为 16 个字符。</p>
-<p>string stringbuffer stringbuilder区别：</p>
-<ul>
-<li>string字符串常量一旦定义内容不可变</li>
-<li>buffer线程安全</li>
-<li>builder线程不安全</li>
-</ul>
-
+<h3 id="List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据"><a href="#List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据" class="headerlink" title="List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据"></a>List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据</h3>
       
     </div>
     
@@ -414,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/31/统计字符串字母出现次数/" rel="next" title="字符串">
-                <i class="fa fa-chevron-left"></i> 字符串
+              <a href="/2018/08/08/基本数据类型/" rel="next" title="基本数据类型">
+                <i class="fa fa-chevron-left"></i> 基本数据类型
               </a>
             
           </div>
@@ -424,8 +402,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/08/01/八个基本数据类型 比byte short int long char double float Boolean/" rel="prev" title="UUU">
-                UUU <i class="fa fa-chevron-right"></i>
+              <a href="/2018/08/08/未命名/" rel="prev" title="StringBuffer和StringBuilder">
+                StringBuffer和StringBuilder <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -635,7 +613,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuffer-线程安全的可变字符序列，效率慢-jdk1-0"><span class="nav-number">1.</span> <span class="nav-text">StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#StringBuffer"><span class="nav-number">2.</span> <span class="nav-text">StringBuffer()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#构造一个其中不带字符的字符串缓冲区，其初始容量为-16-个字符。"><span class="nav-number">3.</span> <span class="nav-text">构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#改进：数据不存在一起（物理分离），逻辑上是连续的"><span class="nav-number">1.</span> <span class="nav-text">改进：数据不存在一起（物理分离），逻辑上是连续的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据"><span class="nav-number">2.</span> <span class="nav-text">List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据</span></a></li></ol></div>
             
 
           </div>
