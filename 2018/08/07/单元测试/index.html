@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="SuMo">
 <meta property="og:description" content="单元测试原因：main运行才知道有问题-&amp;gt;每个方法自己测试：单元测试 白盒测试：代码相关，单元测试，测试单个方法 黑盒测试：用户测试（自动化）  JAVA只能提供简单的功能API，不提供测试；测试厂商来完成测试方面（第三方架包，类库） 1.导入类库junit4.9 2.测试方法（必须无返回值，无参数）如果有返回值和参数，在定义一个测试方法包裹一下  File类获得文件夹中的文件public">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-07T12:22:50.000Z">
+<meta property="og:updated_time" content="2018-08-08T02:13:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单元测试">
 <meta name="twitter:description" content="单元测试原因：main运行才知道有问题-&amp;gt;每个方法自己测试：单元测试 白盒测试：代码相关，单元测试，测试单个方法 黑盒测试：用户测试（自动化）  JAVA只能提供简单的功能API，不提供测试；测试厂商来完成测试方面（第三方架包，类库） 1.导入类库junit4.9 2.测试方法（必须无返回值，无参数）如果有返回值和参数，在定义一个测试方法包裹一下  File类获得文件夹中的文件public">
@@ -434,7 +434,8 @@ if(file.exists()){
 file.delete();//如果还存在，删除自己
     }
 }
-</code></pre><p>在java里面设备与设备之间的信息传输都是以流的形式</p>
+</code></pre><p>file 删除  如果是文件,直接删除,如果是文件夹,必须先将内容删除,然后才能删除空文件夹</p>
+<p> 在java里面设备与设备之间的信息传输都是以流的形式</p>
 <p>小说：发给你<br>视频：发给你</p>
 <p>单位：计算机以什么单位存储 字节 8bit 8个01组成</p>
 <p>小说，一个个字节发给你：网络 1m=1024kb 1kb=1024b</p>
@@ -447,6 +448,27 @@ file.delete();//如果还存在，删除自己
 <li>utf-8：三个字节，存储中文，一个中文三个字节</li>
 <li>GBK：表示中文，一个中文两个字节</li>
 </ul>
+<p>明白java如何操作流</p>
+<p> public abstract class InputStream  extends Objectimplements Closeable此抽象类是表示字节输入流的所有类的超类。 </p>
+<p>需要定义 InputStream 子类的应用程序必须总是提供返回下一个输入字节的方法。</p>
+<p> public abstract class OutputStream  extends Objectimplements Closeable, Flushable此抽象类是表示输出字节流的所有类的超类。输出流接受输出字节并将这些字节发送到某个接收器。 </p>
+<p>需要定义 OutputStream 子类的应用程序必须始终提供至少一种可写入一个输出字节的方法。 </p>
+<p> public class FileOutputStreamextends OutputStream   文件输出流</p>
+<p> public class FileInputStreamextends InputStream<br>  int read()<br>              从此输入流中读取一个数据字节。<br>              int read(byte[] b)<br>                       从此输入流中将最多 b.length 个字节的数据读入一个 byte 数组中。 </p>
+<pre><code>中文乱码:
+设备和设备之间的传输,都会遇到的问题
+中文不是一个字节,是多个字节
+编码方式:
+ASCII:1个字节,存储字母,表达的东西比较少
+Unicode: 2个字节  前一个字节是ASCII,后面是补充(中文)
+ 2个字节存储还是有限
+ utf-8:3个字节,存储中文,如果是UTF-8的形式,一个中文3个字节
+ GBK :表示中文 ,一个中文2个字节
+ 中文常用的字符UTF-8 和GBK ,更倾向于前者
+</code></pre><p>IO中文乱码处理 ,以字节问单位,字节流<br>输入字节流和输出字节流<br>字符流 以char来传输  输入字符流和输出字符流<br>什么时候用字节流,什么时候用字符流?</p>
+<p>文本有中文用字符流,其他都用字节流,因为字节是基本单位<br>字符: Reader输入字符流        Writer 输出字符流</p>
+<p> public abstract class Reader extends Objectimplements Readable, Closeable用于读取字符流的抽象类。子类必须实现的方法只有 read(char[], int, int) 和 close()。但是，多数子类将重写此处定义的一些方法，以提供更高的效率和/或其他功能。<br> public abstract class Writer extends Objectimplements Appendable, Closeable, Flushable写入字符流的抽象类。子类必须实现的方法仅有 write(char[], int, int)、flush() 和 close()。但是，多数子类将重写此处定义的一些方法，以提供更高的效率和/或其他功能。 </p>
+<p> 不管是字符还是字节,计算机的底层还是字节传输<br> public class InputStream Readerextends ReaderInputStreamReader 是字节流通向字符流的桥梁：它使用指定的 charset 读取字节并将其解码为字符。它使用的字符集可以由名称指定或显式给定，或者可以接受平台默认的字符集。<br> 将字节转成字符</p>
 
       
     </div>
