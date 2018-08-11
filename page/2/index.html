@@ -354,6 +354,168 @@ height:50vh;
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2018/08/08/统计字符串字母出现次数/" >
+            
+                <span>字符串</span>
+        </a>
+        <div class="abstract-content">
+            #统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符)
+import java.util.Scanner;
+/*
+
+需求：统计一个字符串中大写字母字符，小写字母字符，数字字符出现的次数。(不考虑其他字符)
+举例：
+“Hello123World”
+结果：
+大写字符：2个
+小写字符：8个
+数字字符：3个*
+分析：
+前提：字符串要存在
+A:定义三个统计变量
+bigCount=0
+smallCount=0
+numberCount=0
+B:遍历字符串，得到每一个字符。
+length()和charAt()结合
+C:判断该字符到底是属于那种类型的
+大：bigCount++...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "Task">Task</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/08/08/Calender抽象类/" >
+            
+                <span>Canlender抽象类</span>
+        </a>
+        <div class="abstract-content">
+            日期 Date SimpleDateFormat Date格式化 format字符串
+Canlender 抽象类
+Canlender cal = new Canlender.getInstance();是他的子类对象
+日期的计算 add() set() get()
+Canlender-&gt;Date getTime()
+Date-&gt;Canlender   setTime(Date)
+输入任何年，输出该年2月是多少天
+思路：        3.1-1         get
+闰年：         3.1 -1 2.29
+不是闰年：     3.1-1 2.28数组：1.里面只能存...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "概念">概念</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/08/08/StringBuffer和StringBuilder/" >
+            
+                <span>StringBuffer和StringBuilder</span>
+        </a>
+        <div class="abstract-content">
+            StringBuffer 线程安全的可变字符序列，效率慢 jdk1.0StringBuffer()构造一个其中不带字符的字符串缓冲区，其初始容量为 16 个字符。1.字符串序列拼接，拼接到尾部
+append（数据）
+insert（int offset，插入的数据）
+delete（int start，int end）
+deleteCharAt（int index）
+2.返回长度
+int capacity（）返回当前容量
+int length（）返回长度（字符数）
+3.查找
+
+char charAt（int index）
+int indexOf（String str）返回第一次出现的指定子字...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "概念">概念</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/08/08/数据/" >
+            
+                <span>链表</span>
+        </a>
+        <div class="abstract-content">
+            ###缺陷：底层是数组，需要空间连续并且数组在实例化时需要长度，那么内存空间可能长时间浪费
+改进：数据不存在一起（物理分离），逻辑上是连续的##链式，链表
+
+如果添加和删除比较频繁使用LinkedList（出库入口）数据量大的时候
+如果查询比价频繁，使用Arraylist（员工系统）
+
+List是一个可以存储重复数据的集合，并且能够根据特定的位置去存储和获取数据
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/08</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "概念">概念</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2018/08/08/基本数据类型/" >
             
                 <span>基本数据类型</span>
@@ -549,157 +711,6 @@ More...
             <div class= abstract-tags >
     
         <a class="post-tag" href="javascript:void(0);" data-tags = "README">README</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/08/08/8-7 Task/" >
-            
-                <span>8-7-Task</span>
-        </a>
-        <div class="abstract-content">
-            1.编写异常类：空异常、年龄低异常、年龄高异常、 工资低异常、工资高异常、身份证非法异常。2.编写一个员工类，(1) 有属性：
-编号，姓名，年龄，工资，身份证号码，员工人数，员工工资总额
-(2) 有构造器：
-构造器1：设置编号，年龄，姓名；如果年龄小于18，抛出年龄低异常；如果年龄大于60抛出年龄高异常，如果姓名为null或为空字符串，抛出空异常。
-构造器2：设置工资，设置身份证号码；如果工资低于600，抛出工资低异常。
- (3) 有方法
-增加工资   addSalary(double addSalary)，抛出工资高异常，当增加后的工资大于员工工资总额时，抛出此异常。
-减少工资  mi...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/08</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Task">Task</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/31/Day05/" >
-            
-                <span>Day05</span>
-        </a>
-        <div class="abstract-content">
-            OPP和OOP的区别：OPP过程开发：程序和程序运行过程一致，从上而下分析业务编写代码OOP面向对象开发：提取能够完成业务功能的对象，然后相互合作
-类和对象区别：类是抽象的模板；对象是类的实体
-####数组的特点：
-1. 只能存储同一种数据类型的数据。
-2. 一旦初始化，长度固定。 
-3. 数组中的元素与元素之间的内存地址是连续的。
-setter和getter方法的作用：封装数据，对私有属性进行封装，只是暴露出public方法来访问。但是为什么要这么做，原因很简单，封装的作用就是保护，保护属性本身不被篡改。
-比如有些属性只是可读但不可写，那么只提供它的getter方法就好，意思就是某些属...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Day">Day</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/31/继承-2C/" >
-            
-                <span>继承;2C</span>
-        </a>
-        <div class="abstract-content">
-            继承继承的特性
-子类拥有父类非private的属性，方法。
-
-子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。
-
-子类可以用自己的方式实现父类的方法。
-
-Java的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，
-
-多重继承就是，例如A类继承B类，B类继承C类，所以按照关系就是C类是B类的父类，B类是A类的父类，
-
-这是java继承区别于C++继承的一个特性。
-
-提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系）。
-
-
-extends关键字在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "继承">继承</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/31/JavaAPI/" >
-            
-                <span>JavaAPI</span>
-        </a>
-        <div class="abstract-content">
-            JavaAPIjava默认的包是Java.lang = language Java语言包，该包下的所有类使用无需导入包，否则需要！
-Object类是层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。
-子类都可以重写父类的方法，意味着任何类都可以继承或重写object的所有方法除非（final，private）
-1Object（）无参构造，即默认的构造方法
-数组里只能存放相同的数据元素-&gt;解决办法：1Object[] arrs  = &#123;1,2.0,&quot;你好&quot;,new Date(),false&#125;;
-原理：...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "JavaAPI">JavaAPI</a>
     
 </div>
             
@@ -1247,9 +1258,129 @@ Object类是层次结构的根类。每个类都使用 Object 作为超类。所
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 27
         </div>
         <!-- search  -->
         
@@ -1265,12 +1396,7 @@ Object类是层次结构的根类。每个类都使用 Object 作为超类。所
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/内部类/" >内部类</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/Collection接口/" >Collection接口</a>
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/单例模式与工厂模式与模板模式/" >单例模式与工厂模式与模板模式</a>
         </li>
     
     
@@ -1284,7 +1410,7 @@ Object类是层次结构的根类。每个类都使用 Object 作为超类。所
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/hello-world/" >Hello World</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/统计字符串字母出现次数/" >字符串</a>
         </li>
     
     
@@ -1295,6 +1421,36 @@ Object类是层次结构的根类。每个类都使用 Object 作为超类。所
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习2/" >复习2</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习1/" >复习1</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习3/" >复习3</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习4/" >复习4</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/内部类/" >内部类</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/Collection接口/" >Collection接口</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -1322,91 +1478,7 @@ Object类是层次结构的根类。每个类都使用 Object 作为超类。所
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/8-7 Task/" >8-7-Task</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/继承-2C/" >继承;2C</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/基本数据类型/" >基本数据类型</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Calender抽象类/" >Canlender抽象类</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/单元测试/" >单元测试</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Java日期时间/" >Java日期时间</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/字符串的方法/" >字符串的方法</a>
         </li>
     
     
@@ -1429,87 +1501,12 @@ Object类是层次结构的根类。每个类都使用 Object 作为超类。所
     
         </ul>
     
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/八个基本数据类型 比byte short int long char double float Boolean/" >UUU</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/统计字符串字母出现次数/" >字符串</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/数据/" >链表</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/字符流和字节流/" >字节流和字符流</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/8-9 Task/" >8-9 Task</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/JavaAPI/" >JavaAPI</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/概念一/" >概念一</a>
         </li>
     
     
@@ -1537,7 +1534,161 @@ Object类是层次结构的根类。每个类都使用 Object 作为超类。所
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/单例模式与工厂模式与模板模式/" >单例模式与工厂模式与模板模式</a>
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/字符串的方法/" >字符串的方法</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/8-7 Task/" >8-7-Task</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/基本数据类型/" >基本数据类型</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/继承-2C/" >继承;2C</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/数据/" >链表</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/概念一/" >概念一</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/字符流和字节流/" >字节流和字符流</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/单元测试/" >单元测试</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/8-9 Task/" >8-9 Task</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/八个基本数据类型 比byte short int long char double float Boolean/" >UUU</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Java日期时间/" >Java日期时间</a>
         </li>
     
     </div>
@@ -1545,19 +1696,21 @@ Object类是层次结构的根类。每个类都使用 Object 作为超类。所
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="不忘初心"><span class="iconfont-archer">&#xe606;</span>不忘初心</span>
+    
         <span class="sidebar-tag-name" data-tags="Task"><span class="iconfont-archer">&#xe606;</span>Task</span>
     
-        <span class="sidebar-tag-name" data-tags="不忘初心"><span class="iconfont-archer">&#xe606;</span>不忘初心</span>
+        <span class="sidebar-tag-name" data-tags="JavaAPI"><span class="iconfont-archer">&#xe606;</span>JavaAPI</span>
     
         <span class="sidebar-tag-name" data-tags="概念"><span class="iconfont-archer">&#xe606;</span>概念</span>
     
         <span class="sidebar-tag-name" data-tags="Day"><span class="iconfont-archer">&#xe606;</span>Day</span>
     
-        <span class="sidebar-tag-name" data-tags="JavaAPI"><span class="iconfont-archer">&#xe606;</span>JavaAPI</span>
-    
         <span class="sidebar-tag-name" data-tags="README"><span class="iconfont-archer">&#xe606;</span>README</span>
     
         <span class="sidebar-tag-name" data-tags="Java知识点"><span class="iconfont-archer">&#xe606;</span>Java知识点</span>
+    
+        <span class="sidebar-tag-name" data-tags="复习"><span class="iconfont-archer">&#xe606;</span>复习</span>
     
         <span class="sidebar-tag-name" data-tags="字符串的方法"><span class="iconfont-archer">&#xe606;</span>字符串的方法</span>
     

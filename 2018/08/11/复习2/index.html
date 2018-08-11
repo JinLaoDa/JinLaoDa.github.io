@@ -15,7 +15,7 @@
     <meta name="description" content="金苗苗的地盘">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>photos · fi3ework&#39;s Studio</title>
+    <title>复习2 · fi3ework&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180721 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180721 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -194,12 +196,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >fi3ework&#39;s Studio.</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">复习2</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>fi3ework's Studio.</a>
 </header>
@@ -213,24 +226,74 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/about-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            复习2
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "复习">复习</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count">1,024</span> / Reading time: <span class="post-count">4 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/08/11</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -333,14 +396,53 @@
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <h2 id="1-break和continue的区别"><a href="#1-break和continue的区别" class="headerlink" title="1.break和continue的区别"></a>1.break和continue的区别</h2><h3 id="break"><a href="#break" class="headerlink" title="break"></a>break</h3><p>有时候我们想在某种条件出现的时候终止循环而不是等到循环条件为false才终止。</p>
+<p>这时我们可以使用break来完成。break用于完全结束一个循环，跳出循环体执行循环后面的语句。</p>
+<h3 id="continue"><a href="#continue" class="headerlink" title="continue"></a>continue</h3><p>continue和break有点类似，区别在于continue只是终止本次循环，接着还执行后面的循环，break则完全终止循环。</p>
+<p>可以理解为continue是跳过当次循环中剩下的语句，执行下一次循环。</p>
+<h2 id="2-String和StringBuilder的区别"><a href="#2-String和StringBuilder的区别" class="headerlink" title="2.String和StringBuilder的区别"></a>2.String和StringBuilder的区别</h2><p><strong>String 对象是不可改变的。每次使用 System.String 类中的方法之一时，都要在内存中创建一个新的字符串对象，这就需要为该新对象分配新的空间。</strong> </p>
+<p>例如：   string a=”a”;a+=”b”;,每次在后面追加都会重新申请一个能放字符串的内存空间；</p>
+<p>string Interning(字符串驻留)指的是通过维护一张表来存放字符串。CLR内部维护了一个哈希表（Hash Table）来管理其创建的大部分string对象，其中key为string本身，而value为分配给对应string的内存地址。</p>
+<p>public static string Intern(string str);</p>
+<p>public static string IsInterned(string str);</p>
+<p>两者的处理机制都是在哈希表中查找是否存在str参数字符串，如果找到就返回已存在的string对象的引用，没有找到，Intern方法将该str字符串添加到哈希表，并返回引用；而IsInterned方法则不会向哈希表中添加字符串，而是返回null;</p>
+<p> StringBuilder 对象是动态对象，允许扩充它所封装的字符串中字符的数量，但是您可以为它可容纳的最大字符数指定一个值，当修改 StringBuilder 时，在达到容量之前，它不会为其自己重新分配空间。当达到容量时，将自动分配新的空间且容量翻倍。可以使用重载的构造函数之一来指定 StringBuilder 类的容量。</p>
+<p>例如：</p>
+<p><code>StringBuilder sb = new StringBuilder();</code> </p>
+<p> <code>sb.Append(&quot;a&quot;)</code></p>
+<p>他不会频繁申请内存空间，他会自动向后扩展。</p>
+<p>两者的区别：</p>
+<ul>
+<li><p>1.string 对象时恒定不变的，stringBuider对象表示的字符串是可变的。stringBuilder是.net提供的动态创建string的高效方式，以克服string对象恒定性带来的性能影响。</p>
+</li>
+<li><p>2.对于简单的字符串连接操作，在性能上stringBuilder并不一定总是优于string。因为stringBuider对象创建代价较大，在字符串目标连接较少的情况下，过度滥用stringBuilder会导致性能的浪费，只有大量的或者无法预知次数的字符串操作，才考虑stringBuilder来实现。事实上，一般连接次数设置100次以内，根本看不出两者的性能差别。</p>
+</li>
+<li><p>3.当修改字符串信息时，此时不许创建对象，可以使用stringBuilder对象。</p>
+</li>
+<li><h2 id="3-类名是否一定要和文件名同名"><a href="#3-类名是否一定要和文件名同名" class="headerlink" title="3.类名是否一定要和文件名同名"></a>3.类名是否一定要和文件名同名</h2>包含main方法的类一定要同名</li>
+</ul>
+<h2 id="4-char占几个字节"><a href="#4-char占几个字节" class="headerlink" title="4.char占几个字节"></a>4.char占几个字节</h2><p>两个字节</p>
+<h2 id="5-有哪几种访问修饰符，范围是什么"><a href="#5-有哪几种访问修饰符，范围是什么" class="headerlink" title="5.有哪几种访问修饰符，范围是什么"></a>5.有哪几种访问修饰符，范围是什么</h2><p>private<br>protected<br>public</p>
+<h2 id="6-如果想跳出多层循环，应该怎么办"><a href="#6-如果想跳出多层循环，应该怎么办" class="headerlink" title="6.如果想跳出多层循环，应该怎么办"></a>6.如果想跳出多层循环，应该怎么办</h2><h2 id="7-如果catch里面有return返回值，finally是否执行，什么时候执行"><a href="#7-如果catch里面有return返回值，finally是否执行，什么时候执行" class="headerlink" title="7.如果catch里面有return返回值，finally是否执行，什么时候执行"></a>7.如果catch里面有return返回值，finally是否执行，什么时候执行</h2><p>结论：</p>
+<pre><code>1、不管有没有异常，try和catch中有没有return，finally都会执行。
+
+2、finally不会影响返回值，返回值在进入finally之前已经确定，存放在内存中。
+
+3、finally是在return表达式之后执行（此时，返回值=（表达式的值）已经存放在内存中），执行完finally之后，最后：return返回值。
+</code></pre><h2 id="8-Java中内存能否直接回收，Java垃圾回收原理。"><a href="#8-Java中内存能否直接回收，Java垃圾回收原理。" class="headerlink" title="8.Java中内存能否直接回收，Java垃圾回收原理。"></a>8.Java中内存能否直接回收，Java垃圾回收原理。</h2><h2 id="9-两个整型变量i和j-不用中间变量进行交换。"><a href="#9-两个整型变量i和j-不用中间变量进行交换。" class="headerlink" title="9.两个整型变量i和j,不用中间变量进行交换。"></a>9.两个整型变量i和j,不用中间变量进行交换。</h2><p>int i = i+j;;<br>i=i-j;<br>j=i-j;</p>
+<h2 id="10-面向对象的特征有哪些方面。"><a href="#10-面向对象的特征有哪些方面。" class="headerlink" title="10.面向对象的特征有哪些方面。"></a>10.面向对象的特征有哪些方面。</h2><ul>
+<li>封装</li>
+<li>多态</li>
+<li>继承</li>
+</ul>
+<h2 id="11-字节符和字符流的区别"><a href="#11-字节符和字符流的区别" class="headerlink" title="11.字节符和字符流的区别"></a>11.字节符和字符流的区别</h2><h2 id="12-常用的字节流有哪些"><a href="#12-常用的字节流有哪些" class="headerlink" title="12.常用的字节流有哪些"></a>12.常用的字节流有哪些</h2><h2 id="13-如何创建文件和文件夹"><a href="#13-如何创建文件和文件夹" class="headerlink" title="13.如何创建文件和文件夹"></a>13.如何创建文件和文件夹</h2>
     </article>
     <!-- license  -->
     
         <div class="license-wrapper">
             <p>原文作者: <a href="http://jinlaoda.com">Gao feng</a>
-            <p>原文链接: <a href="http://jinlaoda.com/photos/index-1.html">http://jinlaoda.com/photos/index-1.html</a>
-            <p>发表日期: <a href="http://jinlaoda.com/photos/index-1.html">August 7th 2018, 8:30:12 pm</a>
+            <p>原文链接: <a href="http://jinlaoda.com/2018/08/11/复习2/">http://jinlaoda.com/2018/08/11/复习2/</a>
+            <p>发表日期: <a href="http://jinlaoda.com/2018/08/11/复习2/">August 11th 2018, 10:45:03 am</a>
             <p>版权声明: 本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可</p>
         </div>
     
@@ -348,8 +450,18 @@
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/08/11/复习3/" title= 复习3 >
+                    <div class="nextTitle">复习3</div>
+                </a>
+            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/08/11/复习1/" title= 复习1 >
+                    <div class="prevTitle">复习1</div>
+                </a>
             
         </li>
     </ul>
@@ -448,6 +560,24 @@
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-break和continue的区别"><span class="toc-number">1.</span> <span class="toc-text">1.break和continue的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#break"><span class="toc-number">1.1.</span> <span class="toc-text">break</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#continue"><span class="toc-number">1.2.</span> <span class="toc-text">continue</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-String和StringBuilder的区别"><span class="toc-number">2.</span> <span class="toc-text">2.String和StringBuilder的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-类名是否一定要和文件名同名"><span class="toc-number">3.</span> <span class="toc-text">3.类名是否一定要和文件名同名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-char占几个字节"><span class="toc-number">4.</span> <span class="toc-text">4.char占几个字节</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-有哪几种访问修饰符，范围是什么"><span class="toc-number">5.</span> <span class="toc-text">5.有哪几种访问修饰符，范围是什么</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-如果想跳出多层循环，应该怎么办"><span class="toc-number">6.</span> <span class="toc-text">6.如果想跳出多层循环，应该怎么办</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-如果catch里面有return返回值，finally是否执行，什么时候执行"><span class="toc-number">7.</span> <span class="toc-text">7.如果catch里面有return返回值，finally是否执行，什么时候执行</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Java中内存能否直接回收，Java垃圾回收原理。"><span class="toc-number">8.</span> <span class="toc-text">8.Java中内存能否直接回收，Java垃圾回收原理。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-两个整型变量i和j-不用中间变量进行交换。"><span class="toc-number">9.</span> <span class="toc-text">9.两个整型变量i和j,不用中间变量进行交换。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-面向对象的特征有哪些方面。"><span class="toc-number">10.</span> <span class="toc-text">10.面向对象的特征有哪些方面。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-字节符和字符流的区别"><span class="toc-number">11.</span> <span class="toc-text">11.字节符和字符流的区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-常用的字节流有哪些"><span class="toc-number">12.</span> <span class="toc-text">12.常用的字节流有哪些</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-如何创建文件和文件夹"><span class="toc-number">13.</span> <span class="toc-text">13.如何创建文件和文件夹</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -810,9 +940,129 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 23
+        Total : 27
         </div>
         <!-- search  -->
         
@@ -828,12 +1078,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/内部类/" >内部类</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/Collection接口/" >Collection接口</a>
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/单例模式与工厂模式与模板模式/" >单例模式与工厂模式与模板模式</a>
         </li>
     
     
@@ -847,7 +1092,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/hello-world/" >Hello World</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/统计字符串字母出现次数/" >字符串</a>
         </li>
     
     
@@ -858,6 +1103,36 @@
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习2/" >复习2</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习1/" >复习1</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习3/" >复习3</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习4/" >复习4</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/内部类/" >内部类</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/Collection接口/" >Collection接口</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -885,91 +1160,7 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/8-7 Task/" >8-7-Task</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/继承-2C/" >继承;2C</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/基本数据类型/" >基本数据类型</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Calender抽象类/" >Canlender抽象类</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/单元测试/" >单元测试</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Java日期时间/" >Java日期时间</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/字符串的方法/" >字符串的方法</a>
         </li>
     
     
@@ -992,87 +1183,12 @@
     
         </ul>
     
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/八个基本数据类型 比byte short int long char double float Boolean/" >UUU</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/统计字符串字母出现次数/" >字符串</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/数据/" >链表</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/字符流和字节流/" >字节流和字符流</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/8-9 Task/" >8-9 Task</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
             <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/JavaAPI/" >JavaAPI</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/概念一/" >概念一</a>
         </li>
     
     
@@ -1100,7 +1216,161 @@
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/单例模式与工厂模式与模板模式/" >单例模式与工厂模式与模板模式</a>
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/字符串的方法/" >字符串的方法</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/8-7 Task/" >8-7-Task</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/基本数据类型/" >基本数据类型</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/继承-2C/" >继承;2C</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/数据/" >链表</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/概念一/" >概念一</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/字符流和字节流/" >字节流和字符流</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/单元测试/" >单元测试</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/8-9 Task/" >8-9 Task</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/八个基本数据类型 比byte short int long char double float Boolean/" >UUU</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Java日期时间/" >Java日期时间</a>
         </li>
     
     </div>
@@ -1108,19 +1378,21 @@
         <div class="sidebar-panel-tags">
     <div class="sidebar-tags-name">
     
+        <span class="sidebar-tag-name" data-tags="不忘初心"><span class="iconfont-archer">&#xe606;</span>不忘初心</span>
+    
         <span class="sidebar-tag-name" data-tags="Task"><span class="iconfont-archer">&#xe606;</span>Task</span>
     
-        <span class="sidebar-tag-name" data-tags="不忘初心"><span class="iconfont-archer">&#xe606;</span>不忘初心</span>
+        <span class="sidebar-tag-name" data-tags="JavaAPI"><span class="iconfont-archer">&#xe606;</span>JavaAPI</span>
     
         <span class="sidebar-tag-name" data-tags="概念"><span class="iconfont-archer">&#xe606;</span>概念</span>
     
         <span class="sidebar-tag-name" data-tags="Day"><span class="iconfont-archer">&#xe606;</span>Day</span>
     
-        <span class="sidebar-tag-name" data-tags="JavaAPI"><span class="iconfont-archer">&#xe606;</span>JavaAPI</span>
-    
         <span class="sidebar-tag-name" data-tags="README"><span class="iconfont-archer">&#xe606;</span>README</span>
     
         <span class="sidebar-tag-name" data-tags="Java知识点"><span class="iconfont-archer">&#xe606;</span>Java知识点</span>
+    
+        <span class="sidebar-tag-name" data-tags="复习"><span class="iconfont-archer">&#xe606;</span>复习</span>
     
         <span class="sidebar-tag-name" data-tags="字符串的方法"><span class="iconfont-archer">&#xe606;</span>字符串的方法</span>
     
@@ -1193,6 +1465,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
