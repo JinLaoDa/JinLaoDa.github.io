@@ -187,6 +187,21 @@
     <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
     <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
     
+        <!-- algolia -->
+        <script>
+            
+            var hits = JSON.parse('{"per_page":10}')
+            var labels = JSON.parse('{"input_placeholder":"Search for Posts","hits_empty":"We did not find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}')
+
+            var algolia = {
+                applicationID: 'D2N8M1EABZ',
+                apiKey: '86755cc3879f8c0f494a95cfd5947a58',
+                indexName: 'MyFirst',
+                hits: hits,
+                labels: labels
+            }
+        </script>
+    
     <!-- fancybox -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" defer></script>
     <!-- 百度统计  -->
@@ -259,9 +274,15 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "概念">概念</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">519</span> / Reading time: <span class="post-count">2 min</span></span>
+                        <span>Word count: <span class="post-count">910</span> / Reading time: <span class="post-count">4 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -390,23 +411,36 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>javabean<br>一类特殊的java类<br>javabean的定义必须满足以下条件<br>1.类是具体和公开的：public修饰类<br>2.具有无参构造器：一定有默认构造（手动）<br>3.属性私有，并提供set和get方法</p>
-<p>VO:与简单java对象对应<br>POJO:简单java对象<br>TO:传输对象，</p>
-<p>这个类是如何加载到JVM中，可以实例化对象并使用？类的加载<br>类的加载指的是将类的。class文件中的二进制数据读入到内存中，将其放在运行时数据区的方法内，然后在堆区创建一个java.lang</p>
-<p>类加载的模式：<br>本地系统<br>网络<br>zip，jar<br>数据库<br>java源文件动态编译</p>
-<p>类加载的过程包括了<br>加载</p>
-<p>验证<br>准备<br>解析合为连接</p>
-<p>初始化<br>使用<br>卸载<br>五个阶段</p>
-<p>类的加载机制<br>类加载器负责加载类<br>    启动类加载器（跟类加载穷）：jdk中的类<br>    扩展类加载器：支撑类<br>系统类加载器：自己开发的类<br>自定义类加载器，第三方的类加载器，网络类加载器等（自己查看）</p>
-<p>类的加载机制：父类委托<br>孩子很懒，啥事都扔给父亲做，父亲做了，孩子就不用做了，父亲做不了，孩子才做</p>
-<p>反射机制</p>
-<p>累加载好了-》实例化对象 new<br>工厂模式：spring容器：负责对象的生命周期</p>
-<p>new的实例化步骤：类加载-知道构造方法，调用构造方法去实例化对象</p>
-<p>spring根本不知道类存不存在，怎么实例化对象</p>
-<p>面向对象是封装好的，外部透明</p>
-<p>在类加载的时候，有一个管理对象，该管理对象能够获得类的一切<br>spring实例化对象的思路：</p>
-<p>spring在一个类加载的时候，获得该类的管理对象，拿到该类的构造方法，spring调用构造方法实例化</p>
-<p>如何拿到一个类的管理对对象？<br>Class对象<br>对象去获得</p>
+        <p>JavaBean与其它Java类相比而言独一无二的特征：</p>
+<pre><code>必须有一个默认的无参构造函数。
+需要被序列化并且实现了Serializable接口。
+可能有一系列可读写属性。
+可能有一系列的&quot;getter&quot;或&quot;setter&quot;方法。
+</code></pre><p>JavaBean属性</p>
+<p>一个JavaBean对象的属性应该是可访问的。这个属性可以是任意合法的Java数据类型，包括自定义Java类。</p>
+<p>一个JavaBean对象的属性可以是可读写，或只读，或只写。JavaBean对象的属性通过JavaBean实现类中提供的两个方法来访问：<br>方法     描述<br>getPropertyName()     举例来说，如果属性的名称为myName，那么这个方法的名字就要写成getMyName()来读取这个属性。这个方法也称为访问器。<br>setPropertyName()     举例来说，如果属性的名称为myName，那么这个方法的名字就要写成setMyName()来写入这个属性。这个方法也称为写入器。</p>
+<p>一个只读的属性只提供getPropertyName()方法，一个只写的属性只提供setPropertyName()方法。<br>JavaBean 程序示例</p>
+<p>这是StudentBean.java文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">package com.runoob;</span><br><span class="line"></span><br><span class="line">public class StudentsBean implements java.io.Serializable</span><br><span class="line">&#123;</span><br><span class="line">   private String firstName = null;</span><br><span class="line">   private String lastName = null;</span><br><span class="line">   private int age = 0;</span><br><span class="line"></span><br><span class="line">   public StudentsBean() &#123;</span><br><span class="line">   &#125;</span><br><span class="line">   public String getFirstName()&#123;</span><br><span class="line">      return firstName;</span><br><span class="line">   &#125;</span><br><span class="line">   public String getLastName()&#123;</span><br><span class="line">      return lastName;</span><br><span class="line">   &#125;</span><br><span class="line">   public int getAge()&#123;</span><br><span class="line">      return age;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public void setFirstName(String firstName)&#123;</span><br><span class="line">      this.firstName = firstName;</span><br><span class="line">   &#125;</span><br><span class="line">   public void setLastName(String lastName)&#123;</span><br><span class="line">      this.lastName = lastName;</span><br><span class="line">   &#125;</span><br><span class="line">   public void setAge(int age) &#123;</span><br><span class="line">      this.age = age;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>编译 StudentBean.java 文件(最后一个实例会用到):</p>
+<p>$ javac StudentsBean.java</p>
+<p>编译后获得 StudentBean.class 文件，将其拷贝到 <jsp 项目="">/WebContent/WEB-INF/classes/com/runoob，如下图所示:</jsp></p>
+<p>访问JavaBean</p>
+<p><a href="jsp:useBean" target="_blank" rel="noopener">jsp:useBean</a> 标签可以在JSP中声明一个JavaBean，然后使用。声明后，JavaBean对象就成了脚本变量，可以通过脚本元素或其他自定义标签来访问。<a href="jsp:useBean" target="_blank" rel="noopener">jsp:useBean</a>标签的语法格式如下：</p>
+<p>&lt;jsp:useBean id=”bean 的名字” scope=”bean 的作用域” typeSpec/&gt;</p>
+<p>其中，根据具体情况，scope的值可以是page，request，session或application。id值可任意只要不和同一JSP文件中其它<a href="jsp:useBean" target="_blank" rel="noopener">jsp:useBean</a>中id值一样就行了。</p>
+<p>接下来给出的是 <a href="jsp:useBean" target="_blank" rel="noopener">jsp:useBean</a> 标签的一个简单的用法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;useBean 实例&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;jsp:useBean id=&quot;date&quot; class=&quot;java.util.Date&quot; /&gt; </span><br><span class="line">&lt;p&gt;日期为：&lt;%= date %&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>它将会产生如下结果：</p>
+<p>日期为：Tue Jun 28 15:22:24 CST 2016</p>
+<p>访问 JavaBean 对象的属性</p>
+<p>在 <a href="jsp:useBean" target="_blank" rel="noopener">jsp:useBean</a> 标签主体中使用 <a href="jsp:getProperty/" target="_blank" rel="noopener">jsp:getProperty/</a> 标签来调用 getter 方法，使用 <a href="jsp:setProperty/" target="_blank" rel="noopener">jsp:setProperty/</a> 标签来调用 setter 方法，语法格式如下：</p>
+<p>&lt;jsp:useBean id=”id” class=”bean 编译的类” scope=”bean 作用域”&gt;<br>   &lt;jsp:setProperty name=”bean 的 id” property=”属性名”<br>                    value=”value”/&gt;<br>   &lt;jsp:getProperty name=”bean 的 id” property=”属性名”/&gt;<br>   ………..<br>&lt;/jsp:useBean&gt;</p>
+<p>name属性指的是Bean的id属性。property属性指的是想要调用的getter或setter方法。</p>
+<p>接下来给出使用以上语法进行属性访问的一个简单例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot;</span><br><span class="line">    pageEncoding=&quot;UTF-8&quot;%&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;get 和 set 属性实例&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;jsp:useBean id=&quot;students&quot; </span><br><span class="line">                    class=&quot;com.runoob.StudentsBean&quot;&gt; </span><br><span class="line">   &lt;jsp:setProperty name=&quot;students&quot; property=&quot;firstName&quot;</span><br><span class="line">                    value=&quot;小强&quot;/&gt;</span><br><span class="line">   &lt;jsp:setProperty name=&quot;students&quot; property=&quot;lastName&quot; </span><br><span class="line">                    value=&quot;王&quot;/&gt;</span><br><span class="line">   &lt;jsp:setProperty name=&quot;students&quot; property=&quot;age&quot;</span><br><span class="line">                    value=&quot;10&quot;/&gt;</span><br><span class="line">&lt;/jsp:useBean&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;学生名字: </span><br><span class="line">   &lt;jsp:getProperty name=&quot;students&quot; property=&quot;firstName&quot;/&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;学生姓氏: </span><br><span class="line">   &lt;jsp:getProperty name=&quot;students&quot; property=&quot;lastName&quot;/&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;p&gt;学生年龄: </span><br><span class="line">   &lt;jsp:getProperty name=&quot;students&quot; property=&quot;age&quot;/&gt;</span><br><span class="line">&lt;/p&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>访问以上 JSP，运行结果如下：</p>
+<p>学生名字: 小强</p>
+<p>学生姓氏: 王</p>
+<p>学生年龄: 10</p>
 
     </article>
     <!-- license  -->
@@ -463,7 +497,7 @@ height:50vh;
     
         
             
-                <a href="//github.com/fi3ework" class="iconfont-archer github" target="_blank" title=github></a>
+                <a href="//github.com/JinLaoDa" class="iconfont-archer github" target="_blank" title=github></a>
             
         
     
@@ -1043,61 +1077,15 @@ top:50vh;
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     <div class="total-and-search">
         <div class="total-archive">
         Total : 31
         </div>
         <!-- search  -->
+        
+            <div class="site-search popup-trigger">
+                <span class="iconfont-archer search-icon">&#xe627;</span>
+            </div>
         
     </div>
     
@@ -1105,6 +1093,234 @@ top:50vh;
     
     
     
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2018/08/13/Java集合类/" >java集合类</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2018/08/13/复习5/" >[Untitled Post]</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习1/" >复习1</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习2/" >复习2</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习3/" >复习3</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习4/" >复习4</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/内部类/" >内部类</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/Collection接口/" >Collection接口</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2018/08/08/8-8 Task/" >8-8 Task</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2018/08/08/8-5 大事件/" >大事件</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/Day05/" >Day05</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Java日期时间/" >Java日期时间</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/继承-2C/" >继承;2C</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/14/JavaBean/" >javabean</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/8-9 Task/" >8-9 Task</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Markdown/" >Markdown</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/hello-world/" >Hello World</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Calender抽象类/" >Canlender抽象类</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/8-7 Task/" >8-7-Task</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/JavaAPI/" >JavaAPI</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/字符串的方法/" >字符串的方法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/概念一/" >概念一</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/字符流和字节流/" >字节流和字符流</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/单例模式与工厂模式与模板模式/" >单例模式与工厂模式与模板模式</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
     
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
@@ -1134,103 +1350,12 @@ top:50vh;
     
         </ul>
     
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2018/08/13/Java集合类/" >java集合类</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2018/08/13/复习5/" >[Untitled Post]</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习4/" >复习4</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习1/" >复习1</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习3/" >复习3</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/复习2/" >复习2</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/内部类/" >内部类</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/8-7 Task/" >8-7-Task</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/11</span><a class="archive-post-title" href= "/2018/08/11/Collection接口/" >Collection接口</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2018/08/08/8-8 Task/" >8-8 Task</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/8-9 Task/" >8-9 Task</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/08</span><a class="archive-post-title" href= "/2018/08/08/8-5 大事件/" >大事件</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/八个基本数据类型 比byte short int long char double float Boolean/" >UUU</a>
         </li>
     
     
@@ -1258,162 +1383,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Markdown/" >Markdown</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/JavaAPI/" >JavaAPI</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/八个基本数据类型 比byte short int long char double float Boolean/" >UUU</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/09/字符流和字节流/" >字节流和字符流</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Calender抽象类/" >Canlender抽象类</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/概念一/" >概念一</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/hello-world/" >Hello World</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/单元测试/" >单元测试</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/14/JavaBean/" >javabean</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/Day05/" >Day05</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/继承-2C/" >继承;2C</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2018/07/31/字符串的方法/" >字符串的方法</a>
-        </li>
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/30</span><a class="archive-post-title" href= "/2018/07/30/单例模式与工厂模式与模板模式/" >单例模式与工厂模式与模板模式</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/Java日期时间/" >Java日期时间</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/14/动态代理模式/" >动态代理模式</a>
         </li>
     
     
@@ -1441,7 +1411,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/14/动态代理模式/" >动态代理模式</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/08/单元测试/" >单元测试</a>
         </li>
     
     </div>
@@ -1459,17 +1429,17 @@ top:50vh;
     
         <span class="sidebar-tag-name" data-tags="JavaAPI"><span class="iconfont-archer">&#xe606;</span>JavaAPI</span>
     
+        <span class="sidebar-tag-name" data-tags="疯狂java"><span class="iconfont-archer">&#xe606;</span>疯狂java</span>
+    
         <span class="sidebar-tag-name" data-tags="README"><span class="iconfont-archer">&#xe606;</span>README</span>
     
         <span class="sidebar-tag-name" data-tags="Java知识点"><span class="iconfont-archer">&#xe606;</span>Java知识点</span>
     
-        <span class="sidebar-tag-name" data-tags="疯狂java"><span class="iconfont-archer">&#xe606;</span>疯狂java</span>
-    
         <span class="sidebar-tag-name" data-tags="复习"><span class="iconfont-archer">&#xe606;</span>复习</span>
     
-        <span class="sidebar-tag-name" data-tags="面试概念总结"><span class="iconfont-archer">&#xe606;</span>面试概念总结</span>
-    
         <span class="sidebar-tag-name" data-tags="字符串的方法"><span class="iconfont-archer">&#xe606;</span>字符串的方法</span>
+    
+        <span class="sidebar-tag-name" data-tags="面试概念总结"><span class="iconfont-archer">&#xe606;</span>面试概念总结</span>
     
         <span class="sidebar-tag-name" data-tags="继承"><span class="iconfont-archer">&#xe606;</span>继承</span>
     
@@ -1529,6 +1499,29 @@ jsonContent:
     </script>
     <script src="/scripts/main.js"></script>
     <!-- algolia -->
+    
+        <div class="site-search">
+  <div class="algolia-popup popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="iconfont-archer">&#xe609;</i>
+    </span>
+  </div>
+</div>
+        <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.8.0/dist/instantsearch.min.js" defer></script>
+        <script src="/scripts/search.js" defer></script>
     
     <!-- busuanzi  -->
     
