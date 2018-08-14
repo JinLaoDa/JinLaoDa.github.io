@@ -15,7 +15,7 @@
     <meta name="description" content="金苗苗的地盘">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>SuMo</title>
+    <title>java集合类 · SuMo</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180721 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180721 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -194,12 +196,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >The space to JinLaoDa</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">java集合类</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>The space to JinLaoDa</a>
 </header>
@@ -213,24 +226,74 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            java集合类
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "疯狂java">疯狂java</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count">293</span> / Reading time: <span class="post-count">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/08/13</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -331,231 +394,60 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/31/Day05/" >
-            
-                <span>Day05</span>
-        </a>
-        <div class="abstract-content">
-            OPP和OOP的区别：OPP过程开发：程序和程序运行过程一致，从上而下分析业务编写代码OOP面向对象开发：提取能够完成业务功能的对象，然后相互合作
-类和对象区别：类是抽象的模板；对象是类的实体
-####数组的特点：
-1. 只能存储同一种数据类型的数据。
-2. 一旦初始化，长度固定。 
-3. 数组中的元素与元素之间的内存地址是连续的。
-setter和getter方法的作用：封装数据，对私有属性进行封装，只是暴露出public方法来访问。但是为什么要这么做，原因很简单，封装的作用就是保护，保护属性本身不被篡改。
-比如有些属性只是可读但不可写，那么只提供它的getter方法就好，意思就是某些属...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Day">Day</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="Java集合类"><a href="#Java集合类" class="headerlink" title="Java集合类"></a>Java集合类</h1><p>Java集合类是一种工具类（java.util），可以存储数量不等的多个对象，还可以实现常用的数据结构，如栈和队列等，保存具有映射关系的关联数组；</p>
+<h2 id="三种体系"><a href="#三种体系" class="headerlink" title="三种体系"></a>三种体系</h2><ul>
+<li>Set:无序的、不可重复的集合</li>
+<li>Map：映射关系的集合</li>
+<li>List：有序的、重复的集合</li>
+<li>Queue：队列集合实现</li>
+</ul>
+<h3 id="java的集合类主要是由两个接口派生：Collection和Map（java集合框架的根接口），集合里只能保存对象（保存对象的引用变量）"><a href="#java的集合类主要是由两个接口派生：Collection和Map（java集合框架的根接口），集合里只能保存对象（保存对象的引用变量）" class="headerlink" title="java的集合类主要是由两个接口派生：Collection和Map（java集合框架的根接口），集合里只能保存对象（保存对象的引用变量）"></a>java的集合类主要是由两个接口派生：Collection和Map（java集合框架的根接口），集合里只能保存对象（保存对象的引用变量）</h3><p>常用实现类：HashSet、ArrayList、HashMap</p>
+<p>使用Iterator接口遍历集合元素<br>1.Boolean hasNext（）：如果被迭代的集合元素还没有被遍历，返回true</p>
+<p>2.Object next（）：返回集合里的下一个元素</p>
+<p>3.void remove（）：删除集合里上一次next方法返回的元素</p>
+<p>Iterator必须依附于Collection对象</p>
+<p>使用foreach循环遍历集合元素</p>
+<p>HashSet类：Set接口的典型实现，大多数时候使用Set集合时就是使用这个实现类。HashSet按Hash算法来存储集合中的元素，因此具有很好的存取和查找性能</p>
+
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/31/继承-2C/" >
-            
-                <span>继承;2C</span>
-        </a>
-        <div class="abstract-content">
-            继承继承的特性
-子类拥有父类非private的属性，方法。
-
-子类可以拥有自己的属性和方法，即子类可以对父类进行扩展。
-
-子类可以用自己的方式实现父类的方法。
-
-Java的继承是单继承，但是可以多重继承，单继承就是一个子类只能继承一个父类，
-
-多重继承就是，例如A类继承B类，B类继承C类，所以按照关系就是C类是B类的父类，B类是A类的父类，
-
-这是java继承区别于C++继承的一个特性。
-
-提高了类之间的耦合性（继承的缺点，耦合度高就会造成代码之间的联系）。
-
-
-extends关键字在 Java 中，类的继承是单一继承，也就是说，一个子类只能拥有一个父类，所以 extends 只能继承一...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "继承">继承</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/31/JavaAPI/" >
-            
-                <span>JavaAPI</span>
-        </a>
-        <div class="abstract-content">
-            JavaAPIjava默认的包是Java.lang = language Java语言包，该包下的所有类使用无需导入包，否则需要！
-Object类是层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。
-子类都可以重写父类的方法，意味着任何类都可以继承或重写object的所有方法除非（final，private）
-1Object（）无参构造，即默认的构造方法
-数组里只能存放相同的数据元素-&gt;解决办法：1Object[] arrs  = &#123;1,2.0,&quot;你好&quot;,new Date(),false&#125;;
-原理：...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "JavaAPI">JavaAPI</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/31/字符串的方法/" >
-            
-                <span>字符串的方法</span>
-        </a>
-        <div class="abstract-content">
-            字符串的方法1.基本数据类型转成字符串的方法valueOf()static String    valueOf(boolean b)         boolean 参数的字符串表示形式。```123         static String	valueOf(char c)          ``` 返回 char 参数的字符串表示形式。
-static String    valueOf(char[] data)         char 数组参数的字符串表示形式。```123         static String	valueOf(char[] data, int offset,...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/31</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "字符串的方法">字符串的方法</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/30/概念一/" >
-            
-                <span>概念一</span>
-        </a>
-        <div class="abstract-content">
-            面向对象：1.什么是oopOOP：Object Oriented Programming;面向对象的程序设计。所谓“对象“在显示支持面向对象的语言中，一般是指类在内存中装载的实例，具有相关的成员变量和成员函数（方法）。面对对象的程序设计完全不同于传统的面向过程程序设计，它大大降低了软件开发的难度。
-OOP达到了软件工程的三个主要目标：重用性，灵活性和拓展性； 
-2.重写和重载的区别重写：子类定义的方法与父类中的方法具有相同的方法名字，相同的参数表和返回类型：
-子类中不能重写父类中的final方法
-子类中必须重写父类的abstract方法重载：同一个类中的多个方法具有相同的名字，但这些名字...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "面试概念总结">面试概念总结</a>
-    
-</div>
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/07/30/单例模式与工厂模式与模板模式/" >
-            
-                <span>单例模式与工厂模式与模板模式</span>
-        </a>
-        <div class="abstract-content">
-            单例：最多一个实例对象工厂模式：所有对象都由工厂生产（静态工厂）模板模式：父类定义好了算法步骤，对于每个步骤的具体实现由子类来实现，通过多态的方式，根据具体子类来完成具体的算法步骤。例子：做菜（提取模板来约束）：
-配备食材（不同的菜食材不一样）
-切菜
-烧菜
-
-
-//模板设计模式
-public  abstract class Cook {
-    //设计模板
-    public abstract void ready();
-    //1
-    public abstract void wash();
-    //2
-    public abstract void cook();
-...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "Java知识点">Java知识点</a>
-    
-</div>
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/08/14/JavaBean/" title= javabean >
+                    <div class="nextTitle">javabean</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/08/13/复习5/" title=  >
+                    <div class="prevTitle">[Untitled Post]</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!--PC和WAP自适应版-->
+
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -636,6 +528,24 @@ public  abstract class Cook {
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java集合类"><span class="toc-number">1.</span> <span class="toc-text">Java集合类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#三种体系"><span class="toc-number">1.1.</span> <span class="toc-text">三种体系</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#java的集合类主要是由两个接口派生：Collection和Map（java集合框架的根接口），集合里只能保存对象（保存对象的引用变量）"><span class="toc-number">1.1.1.</span> <span class="toc-text">java的集合类主要是由两个接口派生：Collection和Map（java集合框架的根接口），集合里只能保存对象（保存对象的引用变量）</span></a></li></ol></li></ol></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1631,6 +1541,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
