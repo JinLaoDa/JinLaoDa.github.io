@@ -25,19 +25,28 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
+    <title><![CDATA[复习5]]></title>
     <url>%2F2018%2F08%2F13%2F%E5%A4%8D%E4%B9%A05%2F</url>
     <content type="text"><![CDATA[1.描述Object类类 Object 是类层次结构的根类。每个类都使用 Object 作为超类。所有对象（包括数组）都实现这个类的方法。 2.Java为什么要采用异常处理机制？Java的异常处理是怎样实现的？异常处理机制能够解决程序中遇到的所有错误吗？哪些错误不是异常处理能够解决的？避免某些错误不会发生；运行中异常不是异常处理可以解决的 3.线程的生命周期新建（New）、就绪（Runnable）、运行（Running）、阻塞（Blocked）和死亡（Dead）5种状态 4.线程创建的方式1.继承thread类创建线程2.实现runnable接口创建线程3.使用callable和future创建线程 5.说明throw语句与throws语句的区别。throws语句：是在方法的函数头出现，出现异常的可能性throw语句：是在函数体里出现，一定抛出了某个异常 6.Jdk和jre的关系jdk是集成开发包jre是java开发环境 7.数组中去除某一个数字，怎么去除？数组长度移除 8.int 和 Integer 有什么区别一个是类一个是数据类型 9.说出ArrayList,Vector, LinkedList的存储性能和特性ArrayList是允许重复，有序的linkedlist是不允许重复，无序的vector是 10.Collection 和 Collections的区别。collection是接口；collections是类 11.sleep() 和 wait() 有什么区别?sleep是属于thread类的方法；wait()是object类中的方法；在调用sleep()方法的过程中，线程不会释放对象锁。 而当调用wait()方法的时候，线程会放弃对象锁，进入等待此对象的等待锁定池，只有针对此对象调用notify()方法后本线程才进入对象锁定池准备 12.error和exception有什么区别?一个是错误一个是异常 13.同步和异步有何异同，在什么情况下分别使用他们？举例说明。同步：发送请求需要等待返回，然后才能发送下一个请求异步可以不需要等待请求返回，随时可以发出下一个请求；优先会使用异步，比如视频网站的加载]]></content>
+      <tags>
+        <tag>复习</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[复习4]]></title>
     <url>%2F2018%2F08%2F11%2F%E5%A4%8D%E4%B9%A04%2F</url>
     <content type="text"><![CDATA[1.策略模式 2.模板模式 3.什么是继承 4.final ,finalize,finally区别 5.局部变量,成员变量和静态变量的区别 6.String StringBuffer StringBuilder 7.String和基本数据之间转换的规则 8.String常用的构造方法 9.什么是装箱和拆箱 10.什么是枚举,如何定义]]></content>
+      <tags>
+        <tag>复习</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[复习3]]></title>
     <url>%2F2018%2F08%2F11%2F%E5%A4%8D%E4%B9%A03%2F</url>
     <content type="text"><![CDATA[1.List和Set的区别List： 1.可以允许重复的对象。 2.可以插入多个null元素。 3.是一个有序容器，保持了每个元素的插入顺序，输出的顺序就是插入的顺序。 4.常用的实现类有 ArrayList、LinkedList 和 Vector。ArrayList 最为流行，它提供了使用索引的随意访问，而 LinkedList 则对于经常需要从 List 中添加或删除元素的场合更为合适。Set： 1.不允许重复对象 2.无序容器，你无法保证每个元素的存储顺序，TreeSet通过 Comparator 或者 Comparable 维护了一个排序顺序。 3.只允许一个 null 元素 4.Set 接口最流行的几个实现类是 HashSet、LinkedHashSet 以及 TreeSet。最流行的是基于 HashMap 实现的 HashSet；TreeSet 还实现了 SortedSet 接口，因此 TreeSet 是一个根据其 compare() 和 compareTo() 的定义进行排序的有序容器。Map 1.Map不是collection的子接口或者实现类。Map是一个接口。 2.Map 的 每个 Entry 都持有两个对象，也就是一个键一个值，Map 可能会持有相同的值对象但键对象必须是唯一的。 TreeMap 也通过 Comparator 或者 Comparable 维护了一个排序顺序。 Map 里你可以拥有随意个 null 值但最多只能有一个 null 键。 5.Map 接口最流行的几个实现类是 HashMap、LinkedHashMap、Hashtable 和 TreeMap。（HashMap、TreeMap最常用） 2.AarrayList和vector的区别 3.LinkedList和AarrayList的区别 4.比较器排序和自然排序的区别 5.Hashtble和HashMap的区别 6.什么是泛型 7.说出几个常用的异常 8.运行时异常和编译异常的区别 9.String里面常用的方法 10.正则中?和* 的区别]]></content>
+      <tags>
+        <tag>复习</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[复习2]]></title>
