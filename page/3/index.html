@@ -185,16 +185,7 @@
     <link rel="preload" as="font" href="/font/Oswald-Regular.ttf" crossorigin>
     <link rel="preload" as="font" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" crossorigin>
 
-    <script>
-    (function(){
-        if('{{ page.password }}'){
-            if (prompt('请输入文章密码') !== '{{ page.password }}'){
-                alert('密码错误！');
-                history.back();
-            }
-        }
-    })();
-</script>
+
 
     
         <!-- algolia -->
@@ -252,7 +243,7 @@ height:50vh;
     <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(https://source.unsplash.com/random)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
