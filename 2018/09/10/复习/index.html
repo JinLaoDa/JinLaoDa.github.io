@@ -15,7 +15,7 @@
     <meta name="description" content="金苗苗的地盘">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>JSP · SuMo</title>
+    <title>复习6 · SuMo</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -228,7 +228,7 @@
                 <a href="/" >The space to JinLaoDa</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">JSP</a>
+                <a href="#" class="post-name">复习6</a>
             </div>
     </div>
     
@@ -260,7 +260,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            JSP
+            复习6
             <!-- 404 -->
             
         </h1>
@@ -277,14 +277,20 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "复习">复习</a>
+    
+</div>
+                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">18</span> / Reading time: <span class="post-count">1 min</span></span>
+                        <span>Word count: <span class="post-count">856</span> / Reading time: <span class="post-count">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/09/07</span>
+                    <span class="post-intro-time">2018/09/10</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -408,7 +414,28 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h3 id="jstl-jsp标准标签库"><a href="#jstl-jsp标准标签库" class="headerlink" title="jstl(jsp标准标签库)"></a>jstl(jsp标准标签库)</h3><p><code>&lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;</code></p>
+        <p>1、描述Servlet生命周期</p>
+<p>加载实例化<br>初始化，调用init()方法<br>响应客户请求阶段，调用service()方法<br>终止阶段，调用destory()方法</p>
+<p>2、Get和post的区别</p>
+<p>get把请求的数据放在URL上，即http协议上，其格式为：以？分割URL和传输数据，参数之间以&amp;相连；get产生一个TCP数据包，浏览器会把http header和data一起发送出去，服务器响应200；get在浏览器回退的时候是无害的，get产生的URL地址可以被Bookmark，<br>post把数据放在http的包体内（request body），post产生两个TCP数据包，浏览器先发送header，服务器响应100 continue，浏览器在发送data，服务器响应200 ok（返回数据），post在回退的时候回再次提交请求，post不可以，</p>
+<p>3、如何处理Servlet线程不安全的问题</p>
+<p>servlet在共享数据的时候会发生不安全；<br>尽量使用局部变量<br>加锁，用synchronize；threadLocal</p>
+<p>4、描述一下cookie和session及其区别</p>
+<p>cookie数据存放在客户的浏览器上（默认开启可以cookie，写入数据），session数据放在服务器上<br>cookie不是很安全，别人可以分析存放在本地的cookie并进行cookie欺骗考虑到安全应用session<br>session会在一定时间内保存在服务器上，会影响到服务器性能<br>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。<br>cookie（1.自动登录：在你第一次的时候选择自动登录，保存用户名密码，之后服务器读取cookie拿到数据，密码比对<br>2.购物车：添加的商品的ID存在cookie里<br>3.已经看过的商品）<br>5、如何进行session的会话跟踪<br>HttpSession是由javaweb提供，用于会话跟踪的类，有getAttribute()，setAttribute()，removeAttribute()方法</p>
+<p>6、描述一下serlvet中的request对象<br>服务器对浏览器发送请求的封装</p>
+<p>7、描述一下转发和重定向</p>
+<p>  1、转发使用的是getRequestDispatcher()方法;重定向使用的是sendRedirect();</p>
+<p>  2、转发：浏览器URL的地址栏不变。重定向：浏览器URL的地址栏改变；</p>
+<p>  3、转发是服务器行为，重定向是客户端行为；</p>
+<p>  4、转发是浏览器只做了一次访问请求。重定向是浏览器做了至少两次的访问请求的；</p>
+<p>  5、转发2次跳转之间传输的信息不会丢失，重定向2次跳转之间传输的信息会丢失（request范围）。</p>
+<p>8、说出JSP中的内置对象</p>
+<p>request、response、session、application、out、pagecontext、config、page、exception</p>
+<p>9、简述JSP中的四大作用域</p>
+<p>page：pageContext，在当前jsp页面中，从把变量放到pageContext开始，到jsp结束<br>request：http请求到服务器处理结束，返回响应；在这个过程中使用forward的方式跳转了多个jsp页面，这些页面里都可以使用这个变量<br>session：当前会话，打开浏览器到关闭<br>application：整个应用，修改之后就会改变，不同于page，request，session之间是完全隔离的</p>
+<p>10、JSP和Servlet的区别</p>
+<p>servlet在java代码中通过httpservletresponse对象动态输出html内容<br>jsp在静态html中嵌入java代码，java代码被动态执行后生成html内容</p>
+<p>11、web开发中的数据共享方式有哪些，说出越多越好？<br>page<br>request<br>session<br>application<br>cookie<br>URL重写<br>hidden fields</p>
 
     </article>
     <!-- license  -->
@@ -417,17 +444,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/09/10/复习/" title= 复习6 >
-                    <div class="nextTitle">复习6</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/09/03/统计字符串字母出现次数/" title= 字符串 >
-                    <div class="prevTitle">字符串</div>
+                <a href= "/2018/09/07/JSP/" title= JSP >
+                    <div class="prevTitle">JSP</div>
                 </a>
             
         </li>
@@ -544,7 +566,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jstl-jsp标准标签库"><span class="toc-number">1.</span> <span class="toc-text">jstl(jsp标准标签库)</span></a></li></ol>
+        
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
