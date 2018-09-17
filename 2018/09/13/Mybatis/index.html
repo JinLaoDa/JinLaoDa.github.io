@@ -15,7 +15,7 @@
     <meta name="description" content="金苗苗的地盘">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>大事件 · SuMo</title>
+    <title>&#39;Mybatis&#39; · SuMo</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -228,7 +228,7 @@
                 <a href="/" >The space to JinLaoDa</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">大事件</a>
+                <a href="#" class="post-name">'Mybatis'</a>
             </div>
     </div>
     
@@ -260,7 +260,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            大事件
+            'Mybatis'
             <!-- 404 -->
             
         </h1>
@@ -277,20 +277,14 @@ height:50vh;
             <div class="post-intros">
                 <!-- 文章页标签  -->
                 
-                    <div class= post-intro-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "不忘初心">不忘初心</a>
-    
-</div>
-                
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">15</span> / Reading time: <span class="post-count">1 min</span></span>
+                        <span>Word count: <span class="post-count">691</span> / Reading time: <span class="post-count">3 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/09/03</span>
+                    <span class="post-intro-time">2018/09/13</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -414,7 +408,24 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="差点忘说了-gt"><a href="#差点忘说了-gt" class="headerlink" title="差点忘说了-&gt;"></a>差点忘说了-&gt;</h1><h2 id="有了无敌可爱的金苗苗"><a href="#有了无敌可爱的金苗苗" class="headerlink" title="有了无敌可爱的金苗苗"></a>有了无敌可爱的金苗苗</h2><p><a href="https://imgchr.com/i/PyPWVK" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/08/PyPWVK.jpg" alt="PyPWVK.jpg"></a><br><a href="https://imgchr.com/i/PyPfUO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/08/PyPfUO.jpg" alt="PyPfUO.jpg"></a></p>
+        <h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><p>支持普通SQL查询，存储过程和高级映射关系的优秀持久层框架</p>
+<h2 id="核心配置文件mybatisconfig-xml"><a href="#核心配置文件mybatisconfig-xml" class="headerlink" title="核心配置文件mybatisconfig.xml"></a>核心配置文件mybatisconfig.xml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE configuration PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</span><br><span class="line">       &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">   &lt;!--配置数据源--&gt;</span><br><span class="line">   &lt;properties resource=&quot;db.properties&quot;&gt;&lt;/properties&gt;</span><br><span class="line">   &lt;!--可以少些包名--&gt;</span><br><span class="line">  &lt;!-- &lt;typeAliases&gt;</span><br><span class="line">       &amp;lt;!&amp;ndash;实体类多就麻烦&amp;ndash;&amp;gt;</span><br><span class="line">       &amp;lt;!&amp;ndash;&lt;typeAlias type=&quot;com.gem.pojo.Emp&quot; alias=&quot;Emp&quot;/&gt;&amp;ndash;&amp;gt;</span><br><span class="line">       &amp;lt;!&amp;ndash;整包起别名，别名就是类名&amp;ndash;&amp;gt;</span><br><span class="line">       &lt;package name=&quot;com.gem.pojo&quot;/&gt;</span><br><span class="line">   &lt;/typeAliases&gt;--&gt;</span><br><span class="line">   &lt;environments default=&quot;development&quot;&gt;</span><br><span class="line">       &lt;environment id=&quot;development&quot;&gt;</span><br><span class="line">           &lt;!--事务采用jdbc的--&gt;</span><br><span class="line">           &lt;transactionManager type=&quot;JDBC&quot;/&gt;</span><br><span class="line">           &lt;!--数据池--&gt;</span><br><span class="line">           &lt;dataSource type=&quot;POOLED&quot;&gt;</span><br><span class="line">               &lt;!--连接数据库的四个配置，$外部导入的方式jdbc.properties--&gt;</span><br><span class="line">               &lt;property name=&quot;driver&quot; value=&quot;$&#123;jdbc.driver&#125;&quot;/&gt;</span><br><span class="line">               &lt;property name=&quot;url&quot; value=&quot;$&#123;jdbc.url&#125;&quot;/&gt;</span><br><span class="line">               &lt;property name=&quot;username&quot; value=&quot;$&#123;jdbc.username&#125;&quot;/&gt;</span><br><span class="line">               &lt;property name=&quot;password&quot; value=&quot;$&#123;jdbc.password&#125;&quot;/&gt;</span><br><span class="line">           &lt;/dataSource&gt;</span><br><span class="line">       &lt;/environment&gt;</span><br><span class="line">   &lt;/environments&gt;</span><br><span class="line">   &lt;!--注册映射文件--&gt;</span><br><span class="line">   &lt;mappers&gt;</span><br><span class="line">       &lt;mapper resource=&quot;com/gem/dao/EmpMapper.xml&quot; /&gt;</span><br><span class="line">   &lt;/mappers&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="注册映射文件EmpMapper-xml"><a href="#注册映射文件EmpMapper-xml" class="headerlink" title="注册映射文件EmpMapper.xml"></a>注册映射文件EmpMapper.xml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span><br><span class="line">&lt;!DOCTYPE mapper PUBLIC &quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span><br><span class="line">        &quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;&gt;</span><br><span class="line">&lt;mapper namespace=&quot;com.gem.dao.EmpMapper&quot;&gt;</span><br><span class="line">    &lt;!--List&lt;Emp&gt; selectAll();--&gt;</span><br><span class="line">    &lt;!--id代表方法名，这个select语句写给哪个方法 dao的方法只代表一个SQL语句;不需要分号；--&gt;</span><br><span class="line">    &lt;!--结果集封装成什么类型--&gt;</span><br><span class="line">    &lt;select id=&quot;selectAll&quot; resultType=&quot;com.gem.pojo.Emp&quot;&gt;</span><br><span class="line">        select *from emp</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">&lt;/mapper&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="常见的四个标签：select，update，insert，delete"><a href="#常见的四个标签：select，update，insert，delete" class="headerlink" title="常见的四个标签：select，update，insert，delete"></a>常见的四个标签：select，update，insert，delete</h2><p>每个标签中都有 id 属性，在同一个 mapper 文件中 id 不允许重复；</p>
+<p>参数 parameterMap 已经被废弃，现在其存在的目的就是为了兼容前期的项目；</p>
+<p>参数 parameterType 支持很多的类型，例如 int、Integer、String、Double、List、Map 或者实体对象等；</p>
+<p>返回值 resultType 用于简单的类型；</p>
+<p>返回值 resultMap 用于复杂的类型；</p>
+<p>当参数和返回值是集合的时候，其声明的是集合中的元素类型；</p>
+<p>SQL 语句不区分大小写，它默认使用 PrepareStatement，预编译，可以防止 SQL 注入。</p>
+<h2 id="调用方式"><a href="#调用方式" class="headerlink" title="调用方式"></a>调用方式</h2><p>1.获取factory<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SqlSessionFactory sqlSessionFactory = new SqlSeeionFactoryBuilder().build(Resources.getResourcesAsReader(&quot;mybatisConfig.xml&quot;));</span><br></pre></td></tr></table></figure></p>
+<p>2.SqlSession实例化dao层的实现类对象<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SqlSession sqlSession = factory.openSession();</span><br><span class="line">EmpMapper mapper =sqlSession.getMapper(EmpMapper.class); </span><br><span class="line">List&lt;Emp&gt; emps = mapper.selectAll();</span><br><span class="line">sqlSession.close();</span><br><span class="line">return emps;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Sql标签"><a href="#Sql标签" class="headerlink" title="Sql标签"></a>Sql标签</h2><p>当多出使用相同的字段时，使用SQL标签完成底层的字符串拼接<br><!--定义SQL标签--></p>
+<sql id="cols"><br>    id,name,password<br></sql>
+
+<p>select <include refid="cols"> from person</include></p>
+<h2 id="映射文件"><a href="#映射文件" class="headerlink" title="映射文件"></a>映射文件</h2><p>1.设置namespace命名空间，目的是为了区分映射文件中的方法<br>2.结果集resultMap是MyBatis最大的特色，对象的ORM就由其来转换：<br>结果集中包括主键id和普通属性result</p>
+<p>结果集中，常用的两个属性分别为：property，表示实体的属性；column，表示 SQL 查询的结果集的列。</p>
 
     </article>
     <!-- license  -->
@@ -423,17 +434,12 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/09/03/8-7 Task/" title= 8-7-Task >
-                    <div class="nextTitle">8-7-Task</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/09/03/8-20笔试/" title=  >
-                    <div class="prevTitle">[Untitled Post]</div>
+                <a href= "/2018/09/11/Servlet/" title= 'Servlet' >
+                    <div class="prevTitle">'Servlet'</div>
                 </a>
             
         </li>
@@ -550,7 +556,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#差点忘说了-gt"><span class="toc-number">1.</span> <span class="toc-text">差点忘说了-&gt;</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#有了无敌可爱的金苗苗"><span class="toc-number">1.1.</span> <span class="toc-text">有了无敌可爱的金苗苗</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Mybatis"><span class="toc-number">1.</span> <span class="toc-text">Mybatis</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#核心配置文件mybatisconfig-xml"><span class="toc-number">1.1.</span> <span class="toc-text">核心配置文件mybatisconfig.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册映射文件EmpMapper-xml"><span class="toc-number">1.2.</span> <span class="toc-text">注册映射文件EmpMapper.xml</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常见的四个标签：select，update，insert，delete"><span class="toc-number">1.3.</span> <span class="toc-text">常见的四个标签：select，update，insert，delete</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调用方式"><span class="toc-number">1.4.</span> <span class="toc-text">调用方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sql标签"><span class="toc-number">1.5.</span> <span class="toc-text">Sql标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#映射文件"><span class="toc-number">1.6.</span> <span class="toc-text">映射文件</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>

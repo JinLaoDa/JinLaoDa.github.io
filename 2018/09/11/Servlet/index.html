@@ -15,7 +15,7 @@
     <meta name="description" content="金苗苗的地盘">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>大事件 · SuMo</title>
+    <title>&#39;Servlet&#39; · SuMo</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -228,7 +228,7 @@
                 <a href="/" >The space to JinLaoDa</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">大事件</a>
+                <a href="#" class="post-name">'Servlet'</a>
             </div>
     </div>
     
@@ -260,7 +260,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            大事件
+            'Servlet'
             <!-- 404 -->
             
         </h1>
@@ -279,18 +279,18 @@ height:50vh;
                 
                     <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-tags = "不忘初心">不忘初心</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags = "JavaWeb">JavaWeb</a>
     
 </div>
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">15</span> / Reading time: <span class="post-count">1 min</span></span>
+                        <span>Word count: <span class="post-count">169</span> / Reading time: <span class="post-count">1 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2018/09/03</span>
+                    <span class="post-intro-time">2018/09/11</span>
                     
                     <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                         <span class="iconfont-archer">&#xe602;</span>
@@ -414,7 +414,13 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h1 id="差点忘说了-gt"><a href="#差点忘说了-gt" class="headerlink" title="差点忘说了-&gt;"></a>差点忘说了-&gt;</h1><h2 id="有了无敌可爱的金苗苗"><a href="#有了无敌可爱的金苗苗" class="headerlink" title="有了无敌可爱的金苗苗"></a>有了无敌可爱的金苗苗</h2><p><a href="https://imgchr.com/i/PyPWVK" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/08/PyPWVK.jpg" alt="PyPWVK.jpg"></a><br><a href="https://imgchr.com/i/PyPfUO" target="_blank" rel="noopener"><img src="https://s1.ax1x.com/2018/08/08/PyPfUO.jpg" alt="PyPfUO.jpg"></a></p>
+        <h2 id="Servlet表单数据"><a href="#Servlet表单数据" class="headerlink" title="Servlet表单数据"></a>Servlet表单数据</h2><ul>
+<li>getParameter():获取表单参数的值</li>
+<li>getParameterValues():参数出现一次以上次数，例如复选框，可调用该方法，返回多个值</li>
+<li>getParameterNames():获取当前请求中所有参数的列表<br>实例：<br>html：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;from action=&quot;HelloForm&quot;method=&quot;GET&quot;&gt;</span><br><span class="line">网址名：&lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;</span><br><span class="line">&lt;br /&gt;</span><br><span class="line">网址：&lt;input type=&quot;text&quot; name=&quot;url&quot; /&gt;</span><br><span class="line">&lt;input type=&quot;submit&quot; value=&quot;提交&quot; /&gt;</span><br><span class="line">&lt;/form&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Servlet:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">String name =new String(request.getParameter(&quot;name&quot;).getBytes(&quot;ISO8859-1&quot;),&quot;UTF-8&quot;);</span><br><span class="line">String docType = &quot;&lt;!DOCTYPE html&gt; \n&quot;;</span><br><span class="line">out.println(docType +</span><br><span class="line">    &quot;&lt;html&gt;\n&quot; +</span><br><span class="line">    &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot; +</span><br><span class="line">    &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot; +</span><br><span class="line">    &quot;&lt;h1 align=\&quot;center\&quot;&gt;&quot; + title + &quot;&lt;/h1&gt;\n&quot; +</span><br><span class="line">    &quot;&lt;ul&gt;\n&quot; +</span><br><span class="line">    &quot;  &lt;li&gt;&lt;b&gt;站点名&lt;/b&gt;：&quot;</span><br><span class="line">    + name + &quot;\n&quot; +</span><br><span class="line">    &quot;  &lt;li&gt;&lt;b&gt;网址&lt;/b&gt;：&quot;</span><br><span class="line">    + request.getParameter(&quot;url&quot;) + &quot;\n&quot; +</span><br><span class="line">    &quot;&lt;/ul&gt;\n&quot; +</span><br><span class="line">    &quot;&lt;/body&gt;&lt;/html&gt;&quot;);</span><br></pre></td></tr></table></figure></p>
 
     </article>
     <!-- license  -->
@@ -424,16 +430,16 @@ height:50vh;
         <li class="next">
             
                 <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/09/03/8-7 Task/" title= 8-7-Task >
-                    <div class="nextTitle">8-7-Task</div>
+                <a href= "/2018/09/13/Mybatis/" title= 'Mybatis' >
+                    <div class="nextTitle">'Mybatis'</div>
                 </a>
             
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href= "/2018/09/03/8-20笔试/" title=  >
-                    <div class="prevTitle">[Untitled Post]</div>
+                <a href= "/2018/09/10/复习/" title= 复习6 >
+                    <div class="prevTitle">复习6</div>
                 </a>
             
         </li>
@@ -550,7 +556,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#差点忘说了-gt"><span class="toc-number">1.</span> <span class="toc-text">差点忘说了-&gt;</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#有了无敌可爱的金苗苗"><span class="toc-number">1.1.</span> <span class="toc-text">有了无敌可爱的金苗苗</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet表单数据"><span class="toc-number">1.</span> <span class="toc-text">Servlet表单数据</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
