@@ -15,7 +15,7 @@
     <meta name="description" content="金苗苗的地盘">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>SuMo</title>
+    <title>复习6 · SuMo</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180721 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180721 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -212,12 +214,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >The space to JinLaoDa</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">复习6</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>The space to JinLaoDa</a>
 </header>
@@ -231,24 +244,68 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(https://source.unsplash.com/random)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            复习6
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count">573</span> / Reading time: <span class="post-count">2 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/09/18</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -349,43 +406,49 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/09/11/Servlet/" >
-            
-                <span>&#39;Servlet&#39;</span>
-        </a>
-        <div class="abstract-content">
-            Servlet表单数据
-getParameter():获取表单参数的值
-getParameterValues():参数出现一次以上次数，例如复选框，可调用该方法，返回多个值
-getParameterNames():获取当前请求中所有参数的列表实例：html：123456&lt;from action=&quot;HelloForm&quot;method=&quot;GET&quot;&gt;网址名：&lt;input type=&quot;text&quot; name=&quot;name&quot;&gt;&lt;br /&gt;网址：&lt;input type=&quot;te...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/09/11</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "JavaWeb">JavaWeb</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h3 id="1-在MyBatis中，-和-的区别是什么？"><a href="#1-在MyBatis中，-和-的区别是什么？" class="headerlink" title="1.在MyBatis中，#{}和${}的区别是什么？"></a>1.在MyBatis中，#{}和${}的区别是什么？</h3><p>${}是Properties文件中的变量占位符,它可以用于标签属性值和sql内部,属于静态文本替换,比如${driver}会被静态替换为com.mysql.jdbc.Driver。当变量是表名的时候，因为表名不可以加单引号所以使用${}来进行字符串拼接</p>
+<p>。#{}是sql的参数占位符,Mybatis会将sql中的#{}替换为?号,在sql执行前会使用PreparedStatement的参数设置方法,按序给sql的?号占位符设置参数值,形式为单引号里是参数的值，因为使用的是preparedStatement无需再次编译，所以可以防止SQL注入（预编译）</p>
+<h3 id="2-Xml映射文件中，除了常见的select-insert-updae-delete标签之外，还有哪些标签？"><a href="#2-Xml映射文件中，除了常见的select-insert-updae-delete标签之外，还有哪些标签？" class="headerlink" title="2.Xml映射文件中，除了常见的select|insert|updae|delete标签之外，还有哪些标签？"></a>2.Xml映射文件中，除了常见的select|insert|updae|delete标签之外，还有哪些标签？</h3><p>动态SQL标签；动态sql的9个标签,trim|where|set|foreach|if|choose|when|otherwise|bind等,其中 为sql片段标签, 为不支持自增的主键生成策略标签。</p>
+<h3 id="3-最佳实践中，通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗？"><a href="#3-最佳实践中，通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗？" class="headerlink" title="3.最佳实践中，通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗？"></a>3.最佳实践中，通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗？</h3><p>Dao接口,就是人们常说的Mapper接口,接口的全限名,就是映射文件中的namespace的值,接口的方法名,就是映射文件中MappedStatement的id值,接口方法内的参数,就是传递给sql的参数。Mapper接口是没有实现类的,当调用接口方法时,接口全限名+方法名拼接字符串作为key值,可唯一定位一个MappedStatement,举例:com.mybatis3.mappers.StudentDao.findStudentById,可以唯一找到namespace为</p>
+<h3 id="4-Mybatis是如何进行分页的？分页插件的原理是什么？"><a href="#4-Mybatis是如何进行分页的？分页插件的原理是什么？" class="headerlink" title="4.Mybatis是如何进行分页的？分页插件的原理是什么？"></a>4.Mybatis是如何进行分页的？分页插件的原理是什么？</h3><p>插件；动态代理方式实现已映射语句执行过程中的某一点拦截；executor，parameterHandler；resultSetHandler<br>StatementHandler</p>
+<h3 id="5-Mybatis动态sql是做什么的？都有哪些动态sql？能简述一下动态sql的执行原理不？"><a href="#5-Mybatis动态sql是做什么的？都有哪些动态sql？能简述一下动态sql的执行原理不？" class="headerlink" title="5.Mybatis动态sql是做什么的？都有哪些动态sql？能简述一下动态sql的执行原理不？"></a>5.Mybatis动态sql是做什么的？都有哪些动态sql？能简述一下动态sql的执行原理不？</h3><h3 id="6-Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？"><a href="#6-Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？" class="headerlink" title="6.Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？"></a>6.Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？</h3><h3 id="7-Mybatis常用的java-API类"><a href="#7-Mybatis常用的java-API类" class="headerlink" title="7.Mybatis常用的java API类"></a>7.Mybatis常用的java API类</h3><p>sqlSessionFactoryBuilder；<br>sqlSessionFactory<br>sqlsession</p>
+<h3 id="8-Session是什么，负责什么，重新开一个窗口算不算一次请求-算不算一次session"><a href="#8-Session是什么，负责什么，重新开一个窗口算不算一次请求-算不算一次session" class="headerlink" title="8.Session是什么，负责什么，重新开一个窗口算不算一次请求,算不算一次session"></a>8.Session是什么，负责什么，重新开一个窗口算不算一次请求,算不算一次session</h3>
     </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/09/13/Mybatis/" title= 'Mybatis' >
+                    <div class="prevTitle">'Mybatis'</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!--PC和WAP自适应版-->
+
+    <!--PC版-->
+
+
+    
+    
+
+    <!-- 评论 -->
 </main>
+
             <!-- profile -->
             
         </div>
@@ -465,6 +528,24 @@ getParameterNames():获取当前请求中所有参数的列表实例：html：12
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-在MyBatis中，-和-的区别是什么？"><span class="toc-number">1.</span> <span class="toc-text">1.在MyBatis中，#{}和${}的区别是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Xml映射文件中，除了常见的select-insert-updae-delete标签之外，还有哪些标签？"><span class="toc-number">2.</span> <span class="toc-text">2.Xml映射文件中，除了常见的select|insert|updae|delete标签之外，还有哪些标签？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-最佳实践中，通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗？"><span class="toc-number">3.</span> <span class="toc-text">3.最佳实践中，通常一个Xml映射文件，都会写一个Dao接口与之对应，请问，这个Dao接口的工作原理是什么？Dao接口里的方法，参数不同时，方法能重载吗？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Mybatis是如何进行分页的？分页插件的原理是什么？"><span class="toc-number">4.</span> <span class="toc-text">4.Mybatis是如何进行分页的？分页插件的原理是什么？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Mybatis动态sql是做什么的？都有哪些动态sql？能简述一下动态sql的执行原理不？"><span class="toc-number">5.</span> <span class="toc-text">5.Mybatis动态sql是做什么的？都有哪些动态sql？能简述一下动态sql的执行原理不？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？"><span class="toc-number">6.</span> <span class="toc-text">6.Mybatis是如何将sql执行结果封装为目标对象并返回的？都有哪些映射形式？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-Mybatis常用的java-API类"><span class="toc-number">7.</span> <span class="toc-text">7.Mybatis常用的java API类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-Session是什么，负责什么，重新开一个窗口算不算一次请求-算不算一次session"><span class="toc-number">8.</span> <span class="toc-text">8.Session是什么，负责什么，重新开一个窗口算不算一次请求,算不算一次session</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -1346,6 +1427,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
